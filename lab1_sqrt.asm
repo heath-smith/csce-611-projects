@@ -1,51 +1,62 @@
+	.data
+guess:	.word	256		# initial guess value
+step:	.word	128		# initial step value
+test0:	.word	65536		# test value for initial guess squared
+res:	.word	22		# store expected end result
 
-li a7,5
-ecall  # place input value into register a0
-
-li t0,256  # initial guess in t0
-li t1,128  # initial step size in t1
-
-loop:	mul t2,t0,t0  # square initial guess
-	mulhu t3,t0,t0
-	srli  t2,t2,14  # shift hi/low 14 bits to right
-	slli t3,t3,18
-	beq t2,t0,exit
-	blt t2,a0,addStep
-	bgt t2,a0,subStep
+	.text
+	#li	a7,5		# load sys call 5
+	#ecall			# execute sys call 5
+	li	a0,512
+	slli	a0,a0,14	# shift input left 14 bits
 	
-loop2:	srli t1,t1,1
-	bne t1,zero,loop
+	slli	t0,a0,14	# shift input 14 bits left (32, 14) precision
+	
+	lw	t1,guess	# load initial guess into t1
+	slli	t1,t1,14	# shift left 14 bits
+	
+	lw	t2,step		# load step into t2
+	slli	t2,t2,14	# shift step left by 14 bits
+	
+loop:	mul	t3,t1,t1	# square initial guess (low bits)
+	mulhu	t4,t1,t1	# square initial guess (high bits)
+	
+	srli	t3,t3,14	# shift right 14 bits
+	slli	t4,t4,18	# shift 18 bits to left
+	or	t5,t3,t4	# shifts (high, low) 14 bits to right
+	
+	beq	a0,t5,exit	# exit if input == guess^2
+	blt	a0,t5,else	# branch if a0 < t5
+	add	t1,t1,t2	# add step if a0 > t5
+
+else:	sub	t1,t1,t2	# jump here if a0 < t5
+
+	srli	t2,t2,1		# shift step right by 1 bit
+	beq	t2,zero,exit		# stop if step == 0
+	
+	b loop
+	
+	##### checkpoint - output expected result of multiplication #####
+	# li	a7,1		# load sys call 1 --> print integer
+	# lw	a0,test0	# load test value into a0
+	# slli	a0,a0,14	# shift left 14 bits
+	# ecall			# print value from a0 to console
+	# b exit
+	
+	##### checkpoint to see result of multiplication #####
+	# li	a7,1		# load sys call 1 --> print integer
+	# mv	a0,t5		# move value from t5 into a0
+	# ecall			# print value from a0 to console
+	
+	
 	b exit
+
+exit:	#li 	a7,1		# load sys call 1
+	#lw	t6,res
+	#slli	t6,t6,14
+	#ecall
 	
-addStep:add t0,t0,t1
-	b loop2
-	
-subStep:sub t0,t0,t1
-	b loop2
-	
-exit:
-
-#.data 
-#Pointone: .word 1368
-#Ten: .word 10
-#Mask: .word 0x3FFF
-
-#Li  a7,5
-#Ecall
-
-#Lw t0,pointone
-#Mul t0,t0,a0
-#Lw t1,mask
-#Andi t0,t0,t1
-
-#Lw t1,ten
-
-#Mul t0,t0,t1
-#Andi t1,t0,1
-#Stli t0,t0,14
-#Add t0,t0,t1
-
-#Li a7,1
-#Mv a0,t0
-
-#ecall
+	li 	a7,1		# load sys call 1
+	mv	a0,t5		# display raw result
+	#srli 	t5,t5,14	# shift t5 right 14 bits (equivalent to integer rounding)
+	ecall			# execute sys call (result should equal previous ecall)

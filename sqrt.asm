@@ -6,9 +6,6 @@ step:	.word	128		# initial step value
 	li	a7,5		# load sys call 5
 	ecall			# execute sys call 5
 	
-	#li	a0,61440
-	#slli	a0,a0,14	# shift input 14 bits left (32, 14) precision
-	
 	mv	t6,a0
 
 	lw	t1,guess	# load initial guess into t1

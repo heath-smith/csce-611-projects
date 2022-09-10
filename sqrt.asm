@@ -1,3 +1,7 @@
+# Heath Smith & John Barnes
+# Lab 1 -- CSCE 611
+# Square Root Binary Search
+
 	.data
 guess:	.word	256		# initial guess value
 step:	.word	128		# initial step value

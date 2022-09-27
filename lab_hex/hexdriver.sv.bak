@@ -18,7 +18,7 @@ module hexdriver (input [3:0] val, output logic [6:0] HEX);
 	// 14 --> 1110 (E)
 	// 15 --> 1111 (F)
 	
-	always_comb begin
+	always_comb
 		case (val)
 			4'd0: HEX = 7'b011_1111;  // 0
 			4'd1: HEX = 7'b000_0110;  // 1
@@ -37,6 +37,6 @@ module hexdriver (input [3:0] val, output logic [6:0] HEX);
 			4'd14: HEX = 7'b111_1001;  // E
 			4'd15: HEX = 7'b111_0001;  // F
 			default: HEX = 7'b000_0000;  // off
-		endcase
 	end
+
 endmodule

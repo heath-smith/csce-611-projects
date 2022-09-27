@@ -67,31 +67,32 @@ module top (
 		leds = 26'b1;
 		/* start out going to the left */
 		ledstate = 1'b0;
+		
+		// hard wire two MSB in seg_5 to 0
+		seg_5[3:2] = 2'b00;
 	end
 
-	// hard wire two MSB in seg_5 to 0
-	assign seg_5[3:2] = 2'b00;
-	
-	// update LSB's in seg_5
-	assign seg_5[1:0] = SW[17:16];
-	
-	hexdriver hex_0(.val(SW[3:0]), .HEX(HEX0));
-	hexdriver hex_1(.val(SW[7:4]), .HEX(HEX1));
-	hexdriver hex_2(.val(SW[11:8]), .HEX(HEX2));
-	hexdriver hex_3(.val(SW[15:12]), .HEX(HEX3));
-	hexdriver hex_4(.val(seg_5), .HEX(HEX4));
-	hexdriver hex_5(.val(seg_default), .HEX(HEX5));
-	hexdriver hex_6(.val(seg_default), .HEX(HEX6));
-	hexdriver hex_7(.val(seg_default), .HEX(HEX7));
-	
-	// always @(posedge CLOCK_50) begin
+	always @(posedge CLOCK_50) begin
 		/* drive the clock divider, every 2^26 cycles of CLOCK_50, the
 		* top bit will roll over and give us a clock edge for clkdiv
 		* */
-		// clkdiv <= clkdiv + 1;
-	// end
+		clkdiv <= clkdiv + 1;
+	end
 
-	// always @(posedge ledclk) begin	
+	always @(posedge ledclk) begin
+		
+		// update LSB's in seg_5
+		seg_5[1:0] = SW[17:16];
+	
+		hexdriver hex_0(.val(SW[3:0]), .HEX(HEX0));
+		hexdriver hex_1(.val(SW[7:4]), .HEX(HEX1));
+		hexdriver hex_2(.val(SW[11:8]), .HEX(HEX2));
+		hexdriver hex_3(.val(SW[15:12]), .HEX(HEX3));
+		hexdriver hex_4(.val(seg_5), .HEX(HEX4));
+		hexdriver hex_5(.val(seg_default), .HEX(HEX5));
+		hexdriver hex_6(.val(seg_default), .HEX(HEX6));
+		hexdriver hex_7(.val(seg_default), .HEX(HEX7));
+		
 		/* going left and we are at the far left, time to turn around */
 		// if ( (ledstate == 0) && (leds == 26'b10000000000000000000000000) ) begin
 			// ledstate <= 1;
@@ -110,7 +111,8 @@ module top (
 		/* going right, and we aren't at the far right */
 		// end else begin
 			// leds <= leds >> 1;
-		//end	
-	// end
+		//end
+		
+	end
 
 endmodule

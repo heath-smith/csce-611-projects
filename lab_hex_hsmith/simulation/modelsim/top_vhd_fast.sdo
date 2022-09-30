@@ -24,7 +24,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "top")
-  (DATE "09/29/2022 22:45:51")
+  (DATE "09/29/2022 23:25:07")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition")
@@ -51,15 +51,6 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[3\]\~I\\.asynch_inst)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH padio combout (581:581:581) (581:581:581))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_asynch_io")
     (INSTANCE \\SW\[2\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
@@ -68,123 +59,11 @@
     )
   )
   (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr6\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1159:1159:1159) (1159:1159:1159))
-        (PORT datab (1254:1254:1254) (1254:1254:1254))
-        (PORT datac (602:602:602) (602:602:602))
-        (PORT datad (1089:1089:1089) (1089:1089:1089))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr5\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1160:1160:1160) (1160:1160:1160))
-        (PORT datab (1252:1252:1252) (1252:1252:1252))
-        (PORT datac (603:603:603) (603:603:603))
-        (PORT datad (1090:1090:1090) (1090:1090:1090))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr4\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1157:1157:1157) (1157:1157:1157))
-        (PORT datab (1256:1256:1256) (1256:1256:1256))
-        (PORT datac (603:603:603) (603:603:603))
-        (PORT datad (1086:1086:1086) (1086:1086:1086))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr3\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1159:1159:1159) (1159:1159:1159))
-        (PORT datab (1254:1254:1254) (1254:1254:1254))
-        (PORT datac (602:602:602) (602:602:602))
-        (PORT datad (1089:1089:1089) (1089:1089:1089))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr2\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1155:1155:1155) (1155:1155:1155))
-        (PORT datab (1256:1256:1256) (1256:1256:1256))
-        (PORT datac (603:603:603) (603:603:603))
-        (PORT datad (1087:1087:1087) (1087:1087:1087))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr1\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1157:1157:1157) (1157:1157:1157))
-        (PORT datab (1256:1256:1256) (1256:1256:1256))
-        (PORT datac (603:603:603) (603:603:603))
-        (PORT datad (1086:1086:1086) (1086:1086:1086))
-        (IOPATH dataa combout (187:187:187) (187:187:187))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_0\|WideOr0\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1162:1162:1162) (1162:1162:1162))
-        (PORT datab (1254:1254:1254) (1254:1254:1254))
-        (PORT datac (605:605:605) (605:605:605))
-        (PORT datad (1091:1091:1091) (1091:1091:1091))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[7\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[3\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (IOPATH padio combout (561:561:561) (561:561:561))
+        (IOPATH padio combout (581:581:581) (581:581:581))
       )
     )
   )
@@ -199,6 +78,15 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE \\SW\[5\]\~I\\.asynch_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (571:571:571) (571:571:571))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_asynch_io")
     (INSTANCE \\SW\[6\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
@@ -208,128 +96,16 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[5\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[7\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (IOPATH padio combout (571:571:571) (571:571:571))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr6\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1331:1331:1331) (1331:1331:1331))
-        (PORT datab (876:876:876) (876:876:876))
-        (PORT datac (947:947:947) (947:947:947))
-        (PORT datad (877:877:877) (877:877:877))
-        (IOPATH dataa combout (187:187:187) (187:187:187))
-        (IOPATH datab combout (180:180:180) (180:180:180))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr5\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1329:1329:1329) (1329:1329:1329))
-        (PORT datab (873:873:873) (873:873:873))
-        (PORT datac (945:945:945) (945:945:945))
-        (PORT datad (876:876:876) (876:876:876))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr4\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1329:1329:1329) (1329:1329:1329))
-        (PORT datab (873:873:873) (873:873:873))
-        (PORT datac (945:945:945) (945:945:945))
-        (PORT datad (877:877:877) (877:877:877))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr3\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1328:1328:1328) (1328:1328:1328))
-        (PORT datab (872:872:872) (872:872:872))
-        (PORT datac (943:943:943) (943:943:943))
-        (PORT datad (877:877:877) (877:877:877))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr2\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1321:1321:1321) (1321:1321:1321))
-        (PORT datab (870:870:870) (870:870:870))
-        (PORT datac (935:935:935) (935:935:935))
-        (PORT datad (879:879:879) (879:879:879))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (180:180:180) (180:180:180))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr1\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1320:1320:1320) (1320:1320:1320))
-        (PORT datab (870:870:870) (870:870:870))
-        (PORT datac (935:935:935) (935:935:935))
-        (PORT datad (878:878:878) (878:878:878))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_1\|WideOr0\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1330:1330:1330) (1330:1330:1330))
-        (PORT datab (875:875:875) (875:875:875))
-        (PORT datac (947:947:947) (947:947:947))
-        (PORT datad (876:876:876) (876:876:876))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
+        (IOPATH padio combout (561:561:561) (561:561:561))
       )
     )
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[11\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[8\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (581:581:581) (581:581:581))
@@ -338,7 +114,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[8\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[9\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (581:581:581) (581:581:581))
@@ -356,140 +132,10 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[9\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[11\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (581:581:581) (581:581:581))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr6\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1251:1251:1251) (1251:1251:1251))
-        (PORT datab (1432:1432:1432) (1432:1432:1432))
-        (PORT datac (1320:1320:1320) (1320:1320:1320))
-        (PORT datad (1278:1278:1278) (1278:1278:1278))
-        (IOPATH dataa combout (187:187:187) (187:187:187))
-        (IOPATH datab combout (180:180:180) (180:180:180))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr5\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1250:1250:1250) (1250:1250:1250))
-        (PORT datab (1432:1432:1432) (1432:1432:1432))
-        (PORT datac (1320:1320:1320) (1320:1320:1320))
-        (PORT datad (1278:1278:1278) (1278:1278:1278))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr4\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1249:1249:1249) (1249:1249:1249))
-        (PORT datab (1432:1432:1432) (1432:1432:1432))
-        (PORT datac (1314:1314:1314) (1314:1314:1314))
-        (PORT datad (1285:1285:1285) (1285:1285:1285))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr3\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1247:1247:1247) (1247:1247:1247))
-        (PORT datab (1435:1435:1435) (1435:1435:1435))
-        (PORT datac (1316:1316:1316) (1316:1316:1316))
-        (PORT datad (1285:1285:1285) (1285:1285:1285))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr2\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1247:1247:1247) (1247:1247:1247))
-        (PORT datab (1434:1434:1434) (1434:1434:1434))
-        (PORT datac (1317:1317:1317) (1317:1317:1317))
-        (PORT datad (1286:1286:1286) (1286:1286:1286))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (180:180:180) (180:180:180))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr1\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1250:1250:1250) (1250:1250:1250))
-        (PORT datab (1432:1432:1432) (1432:1432:1432))
-        (PORT datac (1318:1318:1318) (1318:1318:1318))
-        (PORT datad (1282:1282:1282) (1282:1282:1282))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_2\|WideOr0\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (1249:1249:1249) (1249:1249:1249))
-        (PORT datab (1433:1433:1433) (1433:1433:1433))
-        (PORT datac (1318:1318:1318) (1318:1318:1318))
-        (PORT datad (1283:1283:1283) (1283:1283:1283))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[14\]\~I\\.asynch_inst)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH padio combout (464:464:464) (464:464:464))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[13\]\~I\\.asynch_inst)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH padio combout (454:454:454) (454:454:454))
       )
     )
   )
@@ -504,7 +150,7 @@
   )
   (CELL
     (CELLTYPE "cycloneii_asynch_io")
-    (INSTANCE \\SW\[15\]\~I\\.asynch_inst)
+    (INSTANCE \\SW\[13\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
         (IOPATH padio combout (454:454:454) (454:454:454))
@@ -512,114 +158,20 @@
     )
   )
   (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr6\~0\\)
+    (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE \\SW\[14\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT dataa (3630:3630:3630) (3630:3630:3630))
-        (PORT datab (3598:3598:3598) (3598:3598:3598))
-        (PORT datac (1303:1303:1303) (1303:1303:1303))
-        (PORT datad (3609:3609:3609) (3609:3609:3609))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (59:59:59) (59:59:59))
+        (IOPATH padio combout (464:464:464) (464:464:464))
       )
     )
   )
   (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr5\~0\\)
+    (CELLTYPE "cycloneii_asynch_io")
+    (INSTANCE \\SW\[15\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT dataa (3630:3630:3630) (3630:3630:3630))
-        (PORT datab (3598:3598:3598) (3598:3598:3598))
-        (PORT datac (1302:1302:1302) (1302:1302:1302))
-        (PORT datad (3609:3609:3609) (3609:3609:3609))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr4\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (3625:3625:3625) (3625:3625:3625))
-        (PORT datab (3592:3592:3592) (3592:3592:3592))
-        (PORT datac (1296:1296:1296) (1296:1296:1296))
-        (PORT datad (3609:3609:3609) (3609:3609:3609))
-        (IOPATH dataa combout (187:187:187) (187:187:187))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr3\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (3627:3627:3627) (3627:3627:3627))
-        (PORT datab (3595:3595:3595) (3595:3595:3595))
-        (PORT datac (1299:1299:1299) (1299:1299:1299))
-        (PORT datad (3610:3610:3610) (3610:3610:3610))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr2\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (3627:3627:3627) (3627:3627:3627))
-        (PORT datab (3586:3586:3586) (3586:3586:3586))
-        (PORT datac (1289:1289:1289) (1289:1289:1289))
-        (PORT datad (3611:3611:3611) (3611:3611:3611))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr1\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (3627:3627:3627) (3627:3627:3627))
-        (PORT datab (3588:3588:3588) (3588:3588:3588))
-        (PORT datac (1291:1291:1291) (1291:1291:1291))
-        (PORT datad (3611:3611:3611) (3611:3611:3611))
-        (IOPATH dataa combout (187:187:187) (187:187:187))
-        (IOPATH datab combout (178:178:178) (178:178:178))
-        (IOPATH datac combout (110:110:110) (110:110:110))
-        (IOPATH datad combout (59:59:59) (59:59:59))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneii_lcell_comb")
-    (INSTANCE \\hex_3\|WideOr0\~0\\)
-    (DELAY
-      (ABSOLUTE
-        (PORT dataa (3630:3630:3630) (3630:3630:3630))
-        (PORT datab (3597:3597:3597) (3597:3597:3597))
-        (PORT datac (1302:1302:1302) (1302:1302:1302))
-        (PORT datad (3609:3609:3609) (3609:3609:3609))
-        (IOPATH dataa combout (180:180:180) (180:180:180))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (107:107:107) (107:107:107))
-        (IOPATH datad combout (59:59:59) (59:59:59))
+        (IOPATH padio combout (454:454:454) (454:454:454))
       )
     )
   )
@@ -643,13 +195,461 @@
   )
   (CELL
     (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr6\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1171:1171:1171) (1171:1171:1171))
+        (PORT datab (1267:1267:1267) (1267:1267:1267))
+        (PORT datac (602:602:602) (602:602:602))
+        (PORT datad (1089:1089:1089) (1089:1089:1089))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr5\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1172:1172:1172) (1172:1172:1172))
+        (PORT datab (1265:1265:1265) (1265:1265:1265))
+        (PORT datac (603:603:603) (603:603:603))
+        (PORT datad (1090:1090:1090) (1090:1090:1090))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr4\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1169:1169:1169) (1169:1169:1169))
+        (PORT datab (1269:1269:1269) (1269:1269:1269))
+        (PORT datac (603:603:603) (603:603:603))
+        (PORT datad (1086:1086:1086) (1086:1086:1086))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (110:110:110) (110:110:110))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr3\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1171:1171:1171) (1171:1171:1171))
+        (PORT datab (1267:1267:1267) (1267:1267:1267))
+        (PORT datac (602:602:602) (602:602:602))
+        (PORT datad (1089:1089:1089) (1089:1089:1089))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr2\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1167:1167:1167) (1167:1167:1167))
+        (PORT datab (1269:1269:1269) (1269:1269:1269))
+        (PORT datac (603:603:603) (603:603:603))
+        (PORT datad (1087:1087:1087) (1087:1087:1087))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr1\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1169:1169:1169) (1169:1169:1169))
+        (PORT datab (1269:1269:1269) (1269:1269:1269))
+        (PORT datac (603:603:603) (603:603:603))
+        (PORT datad (1086:1086:1086) (1086:1086:1086))
+        (IOPATH dataa combout (187:187:187) (187:187:187))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_0\|WideOr0\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1174:1174:1174) (1174:1174:1174))
+        (PORT datab (1267:1267:1267) (1267:1267:1267))
+        (PORT datac (605:605:605) (605:605:605))
+        (PORT datad (1091:1091:1091) (1091:1091:1091))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr6\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (880:880:880) (880:880:880))
+        (PORT datab (1489:1489:1489) (1489:1489:1489))
+        (PORT datac (922:922:922) (922:922:922))
+        (PORT datad (834:834:834) (834:834:834))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr5\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (880:880:880) (880:880:880))
+        (PORT datab (1492:1492:1492) (1492:1492:1492))
+        (PORT datac (920:920:920) (920:920:920))
+        (PORT datad (836:836:836) (836:836:836))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr4\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (880:880:880) (880:880:880))
+        (PORT datab (1492:1492:1492) (1492:1492:1492))
+        (PORT datac (920:920:920) (920:920:920))
+        (PORT datad (836:836:836) (836:836:836))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (180:180:180) (180:180:180))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr3\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (880:880:880) (880:880:880))
+        (PORT datab (1492:1492:1492) (1492:1492:1492))
+        (PORT datac (919:919:919) (919:919:919))
+        (PORT datad (836:836:836) (836:836:836))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr2\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (883:883:883) (883:883:883))
+        (PORT datab (1495:1495:1495) (1495:1495:1495))
+        (PORT datac (913:913:913) (913:913:913))
+        (PORT datad (839:839:839) (839:839:839))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr1\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (883:883:883) (883:883:883))
+        (PORT datab (1495:1495:1495) (1495:1495:1495))
+        (PORT datac (912:912:912) (912:912:912))
+        (PORT datad (839:839:839) (839:839:839))
+        (IOPATH dataa combout (187:187:187) (187:187:187))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_1\|WideOr0\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (879:879:879) (879:879:879))
+        (PORT datab (1489:1489:1489) (1489:1489:1489))
+        (PORT datac (921:921:921) (921:921:921))
+        (PORT datad (833:833:833) (833:833:833))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr6\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1427:1427:1427) (1427:1427:1427))
+        (PORT datab (1459:1459:1459) (1459:1459:1459))
+        (PORT datac (1324:1324:1324) (1324:1324:1324))
+        (PORT datad (1296:1296:1296) (1296:1296:1296))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (180:180:180) (180:180:180))
+        (IOPATH datac combout (110:110:110) (110:110:110))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr5\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1427:1427:1427) (1427:1427:1427))
+        (PORT datab (1459:1459:1459) (1459:1459:1459))
+        (PORT datac (1323:1323:1323) (1323:1323:1323))
+        (PORT datad (1296:1296:1296) (1296:1296:1296))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr4\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1429:1429:1429) (1429:1429:1429))
+        (PORT datab (1459:1459:1459) (1459:1459:1459))
+        (PORT datac (1321:1321:1321) (1321:1321:1321))
+        (PORT datad (1299:1299:1299) (1299:1299:1299))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr3\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1429:1429:1429) (1429:1429:1429))
+        (PORT datab (1459:1459:1459) (1459:1459:1459))
+        (PORT datac (1320:1320:1320) (1320:1320:1320))
+        (PORT datad (1299:1299:1299) (1299:1299:1299))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr2\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1433:1433:1433) (1433:1433:1433))
+        (PORT datab (1460:1460:1460) (1460:1460:1460))
+        (PORT datac (1315:1315:1315) (1315:1315:1315))
+        (PORT datad (1303:1303:1303) (1303:1303:1303))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (180:180:180) (180:180:180))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr1\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1432:1432:1432) (1432:1432:1432))
+        (PORT datab (1460:1460:1460) (1460:1460:1460))
+        (PORT datac (1314:1314:1314) (1314:1314:1314))
+        (PORT datad (1302:1302:1302) (1302:1302:1302))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_2\|WideOr0\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1427:1427:1427) (1427:1427:1427))
+        (PORT datab (1458:1458:1458) (1458:1458:1458))
+        (PORT datac (1323:1323:1323) (1323:1323:1323))
+        (PORT datad (1296:1296:1296) (1296:1296:1296))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr6\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3632:3632:3632) (3632:3632:3632))
+        (PORT datab (3600:3600:3600) (3600:3600:3600))
+        (PORT datac (1321:1321:1321) (1321:1321:1321))
+        (PORT datad (3611:3611:3611) (3611:3611:3611))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (110:110:110) (110:110:110))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr5\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3632:3632:3632) (3632:3632:3632))
+        (PORT datab (3600:3600:3600) (3600:3600:3600))
+        (PORT datac (1320:1320:1320) (1320:1320:1320))
+        (PORT datad (3611:3611:3611) (3611:3611:3611))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr4\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3627:3627:3627) (3627:3627:3627))
+        (PORT datab (3594:3594:3594) (3594:3594:3594))
+        (PORT datac (1314:1314:1314) (1314:1314:1314))
+        (PORT datad (3611:3611:3611) (3611:3611:3611))
+        (IOPATH dataa combout (187:187:187) (187:187:187))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr3\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3629:3629:3629) (3629:3629:3629))
+        (PORT datab (3597:3597:3597) (3597:3597:3597))
+        (PORT datac (1317:1317:1317) (1317:1317:1317))
+        (PORT datad (3612:3612:3612) (3612:3612:3612))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr2\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3629:3629:3629) (3629:3629:3629))
+        (PORT datab (3588:3588:3588) (3588:3588:3588))
+        (PORT datac (1307:1307:1307) (1307:1307:1307))
+        (PORT datad (3613:3613:3613) (3613:3613:3613))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (110:110:110) (110:110:110))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr1\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3629:3629:3629) (3629:3629:3629))
+        (PORT datab (3590:3590:3590) (3590:3590:3590))
+        (PORT datac (1309:1309:1309) (1309:1309:1309))
+        (PORT datad (3613:3613:3613) (3613:3613:3613))
+        (IOPATH dataa combout (187:187:187) (187:187:187))
+        (IOPATH datab combout (178:178:178) (178:178:178))
+        (IOPATH datac combout (110:110:110) (110:110:110))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
+    (INSTANCE \\hex_3\|WideOr0\~0\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (3632:3632:3632) (3632:3632:3632))
+        (PORT datab (3599:3599:3599) (3599:3599:3599))
+        (PORT datac (1320:1320:1320) (1320:1320:1320))
+        (PORT datad (3611:3611:3611) (3611:3611:3611))
+        (IOPATH dataa combout (180:180:180) (180:180:180))
+        (IOPATH datab combout (175:175:175) (175:175:175))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneii_lcell_comb")
     (INSTANCE \\hex_4\|Decoder0\~0\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (2825:2825:2825) (2825:2825:2825))
-        (PORT datac (2849:2849:2849) (2849:2849:2849))
-        (IOPATH datab combout (180:180:180) (180:180:180))
-        (IOPATH datac combout (107:107:107) (107:107:107))
+        (PORT datac (2881:2881:2881) (2881:2881:2881))
+        (PORT datad (2877:2877:2877) (2877:2877:2877))
+        (IOPATH datac combout (135:135:135) (135:135:135))
+        (IOPATH datad combout (59:59:59) (59:59:59))
       )
     )
   )
@@ -658,10 +658,10 @@
     (INSTANCE \\hex_4\|Decoder0\~1\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (2824:2824:2824) (2824:2824:2824))
-        (PORT datac (2849:2849:2849) (2849:2849:2849))
-        (IOPATH datab combout (175:175:175) (175:175:175))
-        (IOPATH datac combout (133:133:133) (133:133:133))
+        (PORT datac (2881:2881:2881) (2881:2881:2881))
+        (PORT datad (2877:2877:2877) (2877:2877:2877))
+        (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
       )
     )
   )
@@ -670,10 +670,10 @@
     (INSTANCE \\hex_4\|Decoder0\~2\\)
     (DELAY
       (ABSOLUTE
-        (PORT datab (2823:2823:2823) (2823:2823:2823))
-        (PORT datac (2850:2850:2850) (2850:2850:2850))
-        (IOPATH datab combout (175:175:175) (175:175:175))
+        (PORT datac (2880:2880:2880) (2880:2880:2880))
+        (PORT datad (2876:2876:2876) (2876:2876:2876))
         (IOPATH datac combout (107:107:107) (107:107:107))
+        (IOPATH datad combout (59:59:59) (59:59:59))
       )
     )
   )
@@ -763,6 +763,7 @@
     (INSTANCE \\LEDR\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1379:1379:1379) (1379:1379:1379))
         (IOPATH datain padio (1563:1563:1563) (1563:1563:1563))
       )
     )
@@ -772,6 +773,7 @@
     (INSTANCE \\LEDR\[1\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1092:1092:1092) (1092:1092:1092))
         (IOPATH datain padio (1563:1563:1563) (1563:1563:1563))
       )
     )
@@ -781,6 +783,7 @@
     (INSTANCE \\LEDR\[2\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (680:680:680) (680:680:680))
         (IOPATH datain padio (1533:1533:1533) (1533:1533:1533))
       )
     )
@@ -790,6 +793,7 @@
     (INSTANCE \\LEDR\[3\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (794:794:794) (794:794:794))
         (IOPATH datain padio (1533:1533:1533) (1533:1533:1533))
       )
     )
@@ -799,6 +803,7 @@
     (INSTANCE \\LEDR\[4\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (722:722:722) (722:722:722))
         (IOPATH datain padio (1553:1553:1553) (1553:1553:1553))
       )
     )
@@ -808,6 +813,7 @@
     (INSTANCE \\LEDR\[5\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (802:802:802) (802:802:802))
         (IOPATH datain padio (1553:1553:1553) (1553:1553:1553))
       )
     )
@@ -817,6 +823,7 @@
     (INSTANCE \\LEDR\[6\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (832:832:832) (832:832:832))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -826,6 +833,7 @@
     (INSTANCE \\LEDR\[7\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1345:1345:1345) (1345:1345:1345))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -835,6 +843,7 @@
     (INSTANCE \\LEDR\[8\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1587:1587:1587) (1587:1587:1587))
         (IOPATH datain padio (1513:1513:1513) (1513:1513:1513))
       )
     )
@@ -844,6 +853,7 @@
     (INSTANCE \\LEDR\[9\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1583:1583:1583) (1583:1583:1583))
         (IOPATH datain padio (1523:1523:1523) (1523:1523:1523))
       )
     )
@@ -853,6 +863,7 @@
     (INSTANCE \\LEDR\[10\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1011:1011:1011) (1011:1011:1011))
         (IOPATH datain padio (1523:1523:1523) (1523:1523:1523))
       )
     )
@@ -862,6 +873,7 @@
     (INSTANCE \\LEDR\[11\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (997:997:997) (997:997:997))
         (IOPATH datain padio (1523:1523:1523) (1523:1523:1523))
       )
     )
@@ -871,6 +883,7 @@
     (INSTANCE \\LEDR\[12\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (1094:1094:1094) (1094:1094:1094))
         (IOPATH datain padio (1533:1533:1533) (1533:1533:1533))
       )
     )
@@ -880,6 +893,7 @@
     (INSTANCE \\LEDR\[13\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (3605:3605:3605) (3605:3605:3605))
         (IOPATH datain padio (1533:1533:1533) (1533:1533:1533))
       )
     )
@@ -889,6 +903,7 @@
     (INSTANCE \\LEDR\[14\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (3602:3602:3602) (3602:3602:3602))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -898,6 +913,7 @@
     (INSTANCE \\LEDR\[15\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (3596:3596:3596) (3596:3596:3596))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -907,6 +923,7 @@
     (INSTANCE \\LEDR\[16\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (3501:3501:3501) (3501:3501:3501))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -916,6 +933,7 @@
     (INSTANCE \\LEDR\[17\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
+        (PORT datain (3491:3491:3491) (3491:3491:3491))
         (IOPATH datain padio (1543:1543:1543) (1543:1543:1543))
       )
     )
@@ -995,7 +1013,7 @@
     (INSTANCE \\HEX1\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (289:289:289) (289:289:289))
+        (PORT datain (264:264:264) (264:264:264))
         (IOPATH datain padio (1528:1528:1528) (1528:1528:1528))
       )
     )
@@ -1005,7 +1023,7 @@
     (INSTANCE \\HEX1\[1\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (314:314:314) (314:314:314))
+        (PORT datain (339:339:339) (339:339:339))
         (IOPATH datain padio (1528:1528:1528) (1528:1528:1528))
       )
     )
@@ -1055,7 +1073,7 @@
     (INSTANCE \\HEX1\[6\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (315:315:315) (315:315:315))
+        (PORT datain (340:340:340) (340:340:340))
         (IOPATH datain padio (1428:1428:1428) (1428:1428:1428))
       )
     )
@@ -1065,7 +1083,7 @@
     (INSTANCE \\HEX2\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (352:352:352) (352:352:352))
+        (PORT datain (264:264:264) (264:264:264))
         (IOPATH datain padio (1428:1428:1428) (1428:1428:1428))
       )
     )
@@ -1075,7 +1093,7 @@
     (INSTANCE \\HEX2\[1\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (321:321:321) (321:321:321))
+        (PORT datain (215:215:215) (215:215:215))
         (IOPATH datain padio (1398:1398:1398) (1398:1398:1398))
       )
     )
@@ -1085,7 +1103,7 @@
     (INSTANCE \\HEX2\[2\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (340:340:340) (340:340:340))
+        (PORT datain (215:215:215) (215:215:215))
         (IOPATH datain padio (1438:1438:1438) (1438:1438:1438))
       )
     )
@@ -1095,7 +1113,7 @@
     (INSTANCE \\HEX2\[3\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (315:315:315) (315:315:315))
+        (PORT datain (191:191:191) (191:191:191))
         (IOPATH datain padio (1448:1448:1448) (1448:1448:1448))
       )
     )
@@ -1105,7 +1123,7 @@
     (INSTANCE \\HEX2\[4\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (214:214:214) (214:214:214))
+        (PORT datain (289:289:289) (289:289:289))
         (IOPATH datain padio (1428:1428:1428) (1428:1428:1428))
       )
     )
@@ -1115,7 +1133,7 @@
     (INSTANCE \\HEX2\[5\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (215:215:215) (215:215:215))
+        (PORT datain (340:340:340) (340:340:340))
         (IOPATH datain padio (1428:1428:1428) (1428:1428:1428))
       )
     )
@@ -1125,7 +1143,7 @@
     (INSTANCE \\HEX2\[6\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (215:215:215) (215:215:215))
+        (PORT datain (340:340:340) (340:340:340))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )
@@ -1135,7 +1153,7 @@
     (INSTANCE \\HEX3\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (264:264:264) (264:264:264))
+        (PORT datain (266:266:266) (266:266:266))
         (IOPATH datain padio (1408:1408:1408) (1408:1408:1408))
       )
     )
@@ -1205,7 +1223,7 @@
     (INSTANCE \\HEX4\[0\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (220:220:220) (220:220:220))
+        (PORT datain (294:294:294) (294:294:294))
         (IOPATH datain padio (1408:1408:1408) (1408:1408:1408))
       )
     )
@@ -1224,7 +1242,7 @@
     (INSTANCE \\HEX4\[2\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (217:217:217) (217:217:217))
+        (PORT datain (342:342:342) (342:342:342))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )
@@ -1234,7 +1252,7 @@
     (INSTANCE \\HEX4\[3\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (294:294:294) (294:294:294))
+        (PORT datain (220:220:220) (220:220:220))
         (IOPATH datain padio (1398:1398:1398) (1398:1398:1398))
       )
     )
@@ -1244,7 +1262,7 @@
     (INSTANCE \\HEX4\[4\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (2881:2881:2881) (2881:2881:2881))
+        (PORT datain (2895:2895:2895) (2895:2895:2895))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )
@@ -1254,7 +1272,7 @@
     (INSTANCE \\HEX4\[5\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (340:340:340) (340:340:340))
+        (PORT datain (216:216:216) (216:216:216))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )
@@ -1264,7 +1282,7 @@
     (INSTANCE \\HEX4\[6\]\~I\\.asynch_inst)
     (DELAY
       (ABSOLUTE
-        (PORT datain (2890:2890:2890) (2890:2890:2890))
+        (PORT datain (2903:2903:2903) (2903:2903:2903))
         (IOPATH datain padio (1418:1418:1418) (1418:1418:1418))
       )
     )

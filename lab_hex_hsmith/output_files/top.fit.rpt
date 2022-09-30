@@ -1,5 +1,5 @@
 Fitter report for top
-Thu Sep 29 22:45:43 2022
+Thu Sep 29 23:24:59 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -59,7 +59,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Thu Sep 29 22:45:43 2022           ;
+; Fitter Status                      ; Successful - Thu Sep 29 23:24:59 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top                                             ;
 ; Top-level Entity Name              ; top                                             ;
@@ -222,10 +222,10 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
 ; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
-; Maximum fan-out                             ; 7                     ;
-; Highest non-global fan-out                  ; 7                     ;
-; Total fan-out                               ; 152                   ;
-; Average fan-out                             ; 1.07                  ;
+; Maximum fan-out                             ; 8                     ;
+; Highest non-global fan-out                  ; 8                     ;
+; Total fan-out                               ; 170                   ;
+; Average fan-out                             ; 1.20                  ;
 +---------------------------------------------+-----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -271,7 +271,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ;     -- Registered Output Connections        ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; Internal Connections                        ;                      ;                                ;
-;     -- Total Connections                    ; 152                  ; 0                              ;
+;     -- Total Connections                    ; 170                  ; 0                              ;
 ;     -- Registered Connections               ; 0                    ; 0                              ;
 ;                                             ;                      ;                                ;
 ; External Connections                        ;                      ;                                ;
@@ -305,30 +305,30 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; CLOCK2_50 ; N2    ; 2        ; 0            ; 18           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; CLOCK3_50 ; Y5    ; 1        ; 0            ; 4            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; CLOCK_50  ; A19   ; 4        ; 53           ; 36           ; 3           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; CLOCK3_50 ; AF18  ; 7        ; 46           ; 0            ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; CLOCK_50  ; B6    ; 3        ; 3            ; 36           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
 ; KEY[0]    ; G26   ; 5        ; 65           ; 27           ; 1           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; KEY[1]    ; N23   ; 5        ; 65           ; 20           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; KEY[2]    ; P23   ; 6        ; 65           ; 18           ; 0           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; KEY[3]    ; W26   ; 6        ; 65           ; 10           ; 2           ; 0                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[0]     ; N25   ; 5        ; 65           ; 19           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[10]    ; N1    ; 2        ; 0            ; 18           ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[11]    ; P1    ; 1        ; 0            ; 18           ; 3           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[12]    ; P2    ; 1        ; 0            ; 18           ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[13]    ; T7    ; 1        ; 0            ; 11           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[14]    ; U3    ; 1        ; 0            ; 12           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[15]    ; U4    ; 1        ; 0            ; 12           ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[16]    ; V1    ; 1        ; 0            ; 12           ; 2           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[17]    ; V2    ; 1        ; 0            ; 12           ; 3           ; 4                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[1]     ; N26   ; 5        ; 65           ; 19           ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[2]     ; P25   ; 6        ; 65           ; 19           ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[3]     ; AE14  ; 7        ; 33           ; 0            ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[4]     ; AF14  ; 7        ; 33           ; 0            ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[5]     ; AD13  ; 8        ; 33           ; 0            ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[6]     ; AC13  ; 8        ; 33           ; 0            ; 3           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[7]     ; C13   ; 3        ; 31           ; 36           ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[8]     ; B13   ; 4        ; 31           ; 36           ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[9]     ; A13   ; 4        ; 31           ; 36           ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[0]     ; N25   ; 5        ; 65           ; 19           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[10]    ; N1    ; 2        ; 0            ; 18           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[11]    ; P1    ; 1        ; 0            ; 18           ; 3           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[12]    ; P2    ; 1        ; 0            ; 18           ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[13]    ; T7    ; 1        ; 0            ; 11           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[14]    ; U3    ; 1        ; 0            ; 12           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[15]    ; U4    ; 1        ; 0            ; 12           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[16]    ; V1    ; 1        ; 0            ; 12           ; 2           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[17]    ; V2    ; 1        ; 0            ; 12           ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[1]     ; N26   ; 5        ; 65           ; 19           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[2]     ; P25   ; 6        ; 65           ; 19           ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[3]     ; AE14  ; 7        ; 33           ; 0            ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[4]     ; AF14  ; 7        ; 33           ; 0            ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[5]     ; AD13  ; 8        ; 33           ; 0            ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[6]     ; AC13  ; 8        ; 33           ; 0            ; 3           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[7]     ; C13   ; 3        ; 31           ; 36           ; 2           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[8]     ; B13   ; 4        ; 31           ; 36           ; 0           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[9]     ; A13   ; 4        ; 31           ; 36           ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -428,13 +428,13 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 25 / 64 ( 39 % ) ; 3.3V          ; --           ;
+; 1        ; 24 / 64 ( 38 % ) ; 3.3V          ; --           ;
 ; 2        ; 15 / 59 ( 25 % ) ; 3.3V          ; --           ;
-; 3        ; 1 / 56 ( 2 % )   ; 3.3V          ; --           ;
-; 4        ; 3 / 58 ( 5 % )   ; 3.3V          ; --           ;
+; 3        ; 2 / 56 ( 4 % )   ; 3.3V          ; --           ;
+; 4        ; 2 / 58 ( 3 % )   ; 3.3V          ; --           ;
 ; 5        ; 4 / 65 ( 6 % )   ; 3.3V          ; --           ;
 ; 6        ; 25 / 59 ( 42 % ) ; 3.3V          ; --           ;
-; 7        ; 24 / 58 ( 41 % ) ; 3.3V          ; --           ;
+; 7        ; 25 / 58 ( 43 % ) ; 3.3V          ; --           ;
 ; 8        ; 14 / 56 ( 25 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -461,7 +461,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; A16      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; A17      ; 412        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A18      ; 406        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; A19      ; 394        ; 4        ; CLOCK_50                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A19      ; 394        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A20      ; 390        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A21      ; 382        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; A22      ; 379        ; 4        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -614,7 +614,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; AF15     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AF16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF17     ; 205        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF18     ; 211        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF18     ; 211        ; 7        ; CLOCK3_50                                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF19     ; 213        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF20     ; 223        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 227        ; 7        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -627,7 +627,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; B3       ; 3          ; 2        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; B4       ; 483        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B5       ; 481        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B6       ; 480        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B6       ; 480        ; 3        ; CLOCK_50                                 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B7       ; 466        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B8       ; 458        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 452        ; 3        ; RESERVED_INPUT                           ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -1094,7 +1094,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; Y2       ;            ;          ; NC                                       ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y3       ; 108        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y4       ; 109        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y5       ; 121        ; 1        ; CLOCK3_50                                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y5       ; 121        ; 1        ; RESERVED_INPUT                           ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y6       ;            ;          ; GND_PLL1                                 ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y7       ;            ;          ; VCCD_PLL1                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y8       ;            ;          ; GNDA_PLL1                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1179,7 +1179,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+---------------+-----------------------+-----+
 ; CLOCK_50  ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; CLOCK2_50 ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
-; CLOCK3_50 ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
+; CLOCK3_50 ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; LEDG[0]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDG[1]   ; Output   ; --            ; --            ; --                    ; --  ;
 ; LEDG[2]   ; Output   ; --            ; --            ; --                    ; --  ;
@@ -1321,6 +1321,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[13]                   ; 0                 ; 6       ;
 ; SW[14]                            ;                   ;         ;
 ;      - hexdriver:hex_3|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr5~0  ; 0                 ; 6       ;
@@ -1329,6 +1330,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[14]                   ; 0                 ; 6       ;
 ; SW[15]                            ;                   ;         ;
 ;      - hexdriver:hex_3|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr5~0  ; 0                 ; 6       ;
@@ -1337,16 +1339,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[15]                   ; 0                 ; 6       ;
 ; SW[16]                            ;                   ;         ;
-;      - hexdriver:hex_4|Decoder0~0 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~1 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~2 ; 0                 ; 6       ;
-;      - HEX4[4]                    ; 0                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~0 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~1 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~2 ; 1                 ; 6       ;
+;      - LEDR[16]                   ; 1                 ; 6       ;
+;      - HEX4[4]                    ; 1                 ; 6       ;
 ; SW[17]                            ;                   ;         ;
-;      - hexdriver:hex_4|Decoder0~0 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~1 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~2 ; 0                 ; 6       ;
-;      - HEX4[6]                    ; 0                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~0 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~1 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~2 ; 1                 ; 6       ;
+;      - LEDR[17]                   ; 1                 ; 6       ;
+;      - HEX4[6]                    ; 1                 ; 6       ;
 +-----------------------------------+-------------------+---------+
 
 
@@ -1355,24 +1360,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+---------+
 ; Name                       ; Fan-Out ;
 +----------------------------+---------+
-; SW[15]                     ; 7       ;
-; SW[14]                     ; 7       ;
-; SW[13]                     ; 7       ;
-; SW[12]                     ; 7       ;
-; SW[11]                     ; 7       ;
-; SW[10]                     ; 7       ;
-; SW[9]                      ; 7       ;
-; SW[8]                      ; 7       ;
-; SW[7]                      ; 7       ;
-; SW[6]                      ; 7       ;
-; SW[5]                      ; 7       ;
-; SW[4]                      ; 7       ;
-; SW[3]                      ; 7       ;
-; SW[2]                      ; 7       ;
-; SW[1]                      ; 7       ;
-; SW[0]                      ; 7       ;
-; SW[17]                     ; 4       ;
-; SW[16]                     ; 4       ;
+; SW[15]                     ; 8       ;
+; SW[14]                     ; 8       ;
+; SW[13]                     ; 8       ;
+; SW[12]                     ; 8       ;
+; SW[11]                     ; 8       ;
+; SW[10]                     ; 8       ;
+; SW[9]                      ; 8       ;
+; SW[8]                      ; 8       ;
+; SW[7]                      ; 8       ;
+; SW[6]                      ; 8       ;
+; SW[5]                      ; 8       ;
+; SW[4]                      ; 8       ;
+; SW[3]                      ; 8       ;
+; SW[2]                      ; 8       ;
+; SW[1]                      ; 8       ;
+; SW[0]                      ; 8       ;
+; SW[17]                     ; 5       ;
+; SW[16]                     ; 5       ;
 ; hexdriver:hex_4|Decoder0~0 ; 2       ;
 ; hexdriver:hex_4|Decoder0~2 ; 1       ;
 ; hexdriver:hex_4|Decoder0~1 ; 1       ;
@@ -1412,14 +1417,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+-----------------------+
 ; Other Routing Resource Type ; Usage                 ;
 +-----------------------------+-----------------------+
-; Block interconnects         ; 52 / 94,460 ( < 1 % ) ;
-; C16 interconnects           ; 15 / 3,315 ( < 1 % )  ;
-; C4 interconnects            ; 34 / 60,840 ( < 1 % ) ;
+; Block interconnects         ; 70 / 94,460 ( < 1 % ) ;
+; C16 interconnects           ; 24 / 3,315 ( < 1 % )  ;
+; C4 interconnects            ; 58 / 60,840 ( < 1 % ) ;
 ; Direct links                ; 12 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 0 / 16 ( 0 % )        ;
 ; Local interconnects         ; 0 / 33,216 ( 0 % )    ;
-; R24 interconnects           ; 35 / 3,091 ( 1 % )    ;
-; R4 interconnects            ; 13 / 81,294 ( < 1 % ) ;
+; R24 interconnects           ; 47 / 3,091 ( 2 % )    ;
+; R4 interconnects            ; 17 / 81,294 ( < 1 % ) ;
 +-----------------------------+-----------------------+
 
 
@@ -1561,7 +1566,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has 3.3V VCCIO pins. 25 total pin(s) used --  34 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 24 total pin(s) used --  34 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 14 total pin(s) used --  42 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1663,11 +1668,11 @@ Warning (306006): Found 83 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/heathsmith/repos/csce-611-projects/lab_hex_hsmith/output_files/top.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 707 megabytes
-    Info: Processing ended: Thu Sep 29 22:45:43 2022
+    Info: Processing ended: Thu Sep 29 23:24:59 2022
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 

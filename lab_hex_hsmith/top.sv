@@ -44,9 +44,11 @@ module top (
 	assign ledclk = clkdiv[23];
 
 	/* driver for LEDs */
-	logic [25:0] leds;
-	assign LEDR = leds[25:8];
-	assign LEDG = leds[7:0];
+	//logic [25:0] leds;
+	//assign LEDR = leds[25:8];
+	assign LEDR = SW;
+	//assign LEDG = leds[7:0];
+	assign LEDG = 8'b0000_0000;
 
 	/* LED state register, 0 means going left, 1 means going right */
 	logic ledstate;
@@ -70,7 +72,7 @@ module top (
 	initial begin
 		clkdiv = 26'h0;
 		/* start at the far right, LEDG0 */
-		leds = 26'b1;
+		//leds = 26'b1;
 		/* start out going to the left */
 		ledstate = 1'b0;
 		/* set unused bits of seg_4 */

@@ -1,6 +1,6 @@
 Fitter report for DE2_115
-Thu Sep 29 19:04:20 2022
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Fri Oct  7 16:20:15 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -43,9 +43,9 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -55,31 +55,30 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Thu Sep 29 19:04:20 2022       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
-; Revision Name                      ; DE2_115                                     ;
-; Top-level Entity Name              ; top                                         ;
-; Family                             ; Cyclone IV E                                ;
-; Device                             ; EP4CE115F29C7                               ;
-; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 31 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 31 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                         ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 108 / 529 ( 20 % )                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Fitter Summary                                                                       ;
++------------------------------------+-------------------------------------------------+
+; Fitter Status                      ; Successful - Fri Oct  7 16:20:15 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; DE2_115                                         ;
+; Top-level Entity Name              ; top                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Device                             ; EP4CE115F29C7                                   ;
+; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 31 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 31 / 114,480 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                             ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 108 / 529 ( 20 % )                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
++------------------------------------+-------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -147,15 +146,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
+;     Processors 2-8         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -197,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_hex/DE2_115.pin.
+The pin-out file can be found in /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/DE2_115.pin.
 
 
 +----------------------------------------------------------------------+
@@ -242,12 +241,12 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 0.6% / 0.3% / 1.1%     ;
-; Maximum fan-out                             ; 7                      ;
-; Highest non-global fan-out                  ; 7                      ;
-; Total fan-out                               ; 265                    ;
-; Average fan-out                             ; 1.03                   ;
+; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.2%     ;
+; Peak interconnect usage (total/H/V)         ; 0.8% / 0.7% / 1.0%     ;
+; Maximum fan-out                             ; 8                      ;
+; Highest non-global fan-out                  ; 8                      ;
+; Total fan-out                               ; 283                    ;
+; Average fan-out                             ; 1.10                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -294,7 +293,7 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 260                   ; 5                              ;
+;     -- Total Connections                    ; 278                   ; 5                              ;
 ;     -- Registered Connections               ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
@@ -334,24 +333,24 @@ The pin-out file can be found in /home/heathsmith/repos/csce-611-projects/lab_he
 ; KEY[1]    ; M21   ; 6        ; 115          ; 53           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; KEY[2]    ; N21   ; 6        ; 115          ; 42           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; KEY[3]    ; R24   ; 5        ; 115          ; 35           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[0]     ; AB28  ; 5        ; 115          ; 17           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[10]    ; AC24  ; 5        ; 115          ; 4            ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[11]    ; AB24  ; 5        ; 115          ; 5            ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[12]    ; AB23  ; 5        ; 115          ; 7            ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[13]    ; AA24  ; 5        ; 115          ; 9            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[14]    ; AA23  ; 5        ; 115          ; 10           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[15]    ; AA22  ; 5        ; 115          ; 6            ; 14           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[16]    ; Y24   ; 5        ; 115          ; 13           ; 0            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[17]    ; Y23   ; 5        ; 115          ; 14           ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[1]     ; AC28  ; 5        ; 115          ; 14           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[2]     ; AC27  ; 5        ; 115          ; 15           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[3]     ; AD27  ; 5        ; 115          ; 13           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[4]     ; AB27  ; 5        ; 115          ; 18           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[5]     ; AC26  ; 5        ; 115          ; 11           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[6]     ; AD26  ; 5        ; 115          ; 10           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[7]     ; AB26  ; 5        ; 115          ; 15           ; 0            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[8]     ; AC25  ; 5        ; 115          ; 4            ; 21           ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[9]     ; AB25  ; 5        ; 115          ; 16           ; 7            ; 7                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[0]     ; AB28  ; 5        ; 115          ; 17           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[10]    ; AC24  ; 5        ; 115          ; 4            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[11]    ; AB24  ; 5        ; 115          ; 5            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[12]    ; AB23  ; 5        ; 115          ; 7            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[13]    ; AA24  ; 5        ; 115          ; 9            ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[14]    ; AA23  ; 5        ; 115          ; 10           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[15]    ; AA22  ; 5        ; 115          ; 6            ; 14           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[16]    ; Y24   ; 5        ; 115          ; 13           ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[17]    ; Y23   ; 5        ; 115          ; 14           ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[1]     ; AC28  ; 5        ; 115          ; 14           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[2]     ; AC27  ; 5        ; 115          ; 15           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[3]     ; AD27  ; 5        ; 115          ; 13           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[4]     ; AB27  ; 5        ; 115          ; 18           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[5]     ; AC26  ; 5        ; 115          ; 11           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[6]     ; AD26  ; 5        ; 115          ; 10           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[7]     ; AB26  ; 5        ; 115          ; 15           ; 0            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[8]     ; AC25  ; 5        ; 115          ; 4            ; 21           ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[9]     ; AB25  ; 5        ; 115          ; 16           ; 7            ; 8                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
 
 
@@ -1476,21 +1475,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[0]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[1]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[2]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[3]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[3]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[4]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[5]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[6]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[5]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[6]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[7]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[8]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[9]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[8]     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[9]     ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[10]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[11]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[12]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[13]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
-; SW[14]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[14]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; SW[15]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
 ; SW[16]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; SW[17]    ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; SW[17]    ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -1514,6 +1513,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_0|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[0]~output             ; 0                 ; 6       ;
 ; SW[1]                             ;                   ;         ;
 ;      - hexdriver:hex_0|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr5~0  ; 0                 ; 6       ;
@@ -1522,6 +1522,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_0|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[1]~output             ; 0                 ; 6       ;
 ; SW[2]                             ;                   ;         ;
 ;      - hexdriver:hex_0|WideOr6~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr5~0  ; 1                 ; 6       ;
@@ -1530,14 +1531,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_0|WideOr2~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr1~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_0|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[2]~output             ; 1                 ; 6       ;
 ; SW[3]                             ;                   ;         ;
-;      - hexdriver:hex_0|WideOr6~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr5~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr4~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr3~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr2~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr1~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_0|WideOr0~0  ; 0                 ; 6       ;
+;      - hexdriver:hex_0|WideOr6~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr5~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr4~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr3~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr2~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr1~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_0|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[3]~output             ; 1                 ; 6       ;
 ; SW[4]                             ;                   ;         ;
 ;      - hexdriver:hex_1|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr5~0  ; 0                 ; 6       ;
@@ -1546,15 +1549,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_1|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[4]~output             ; 0                 ; 6       ;
 ; SW[5]                             ;                   ;         ;
-;      - hexdriver:hex_1|WideOr6~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr5~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr4~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr3~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr2~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr1~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_1|WideOr0~0  ; 1                 ; 6       ;
-; SW[6]                             ;                   ;         ;
 ;      - hexdriver:hex_1|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr5~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr4~0  ; 0                 ; 6       ;
@@ -1562,6 +1558,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_1|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[5]~output             ; 0                 ; 6       ;
+; SW[6]                             ;                   ;         ;
+;      - hexdriver:hex_1|WideOr6~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr5~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr4~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr3~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr2~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr1~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_1|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[6]~output             ; 1                 ; 6       ;
 ; SW[7]                             ;                   ;         ;
 ;      - hexdriver:hex_1|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr5~0  ; 0                 ; 6       ;
@@ -1570,15 +1576,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_1|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_1|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[7]~output             ; 0                 ; 6       ;
 ; SW[8]                             ;                   ;         ;
-;      - hexdriver:hex_2|WideOr6~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr5~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr4~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr3~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr2~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr1~0  ; 1                 ; 6       ;
-;      - hexdriver:hex_2|WideOr0~0  ; 1                 ; 6       ;
-; SW[9]                             ;                   ;         ;
 ;      - hexdriver:hex_2|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr5~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr4~0  ; 0                 ; 6       ;
@@ -1586,6 +1585,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_2|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[8]~output             ; 0                 ; 6       ;
+; SW[9]                             ;                   ;         ;
+;      - hexdriver:hex_2|WideOr6~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr5~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr4~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr3~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr2~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr1~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_2|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[9]~output             ; 1                 ; 6       ;
 ; SW[10]                            ;                   ;         ;
 ;      - hexdriver:hex_2|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr5~0  ; 0                 ; 6       ;
@@ -1594,6 +1603,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_2|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[10]~output            ; 0                 ; 6       ;
 ; SW[11]                            ;                   ;         ;
 ;      - hexdriver:hex_2|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr5~0  ; 0                 ; 6       ;
@@ -1602,6 +1612,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_2|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_2|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[11]~output            ; 0                 ; 6       ;
 ; SW[12]                            ;                   ;         ;
 ;      - hexdriver:hex_3|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr5~0  ; 0                 ; 6       ;
@@ -1610,6 +1621,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[12]~output            ; 0                 ; 6       ;
 ; SW[13]                            ;                   ;         ;
 ;      - hexdriver:hex_3|WideOr6~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr5~0  ; 1                 ; 6       ;
@@ -1618,14 +1630,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 1                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[13]~output            ; 1                 ; 6       ;
 ; SW[14]                            ;                   ;         ;
-;      - hexdriver:hex_3|WideOr6~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr5~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr4~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr3~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
-;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - hexdriver:hex_3|WideOr6~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr5~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr4~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr3~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr2~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr1~0  ; 1                 ; 6       ;
+;      - hexdriver:hex_3|WideOr0~0  ; 1                 ; 6       ;
+;      - LEDR[14]~output            ; 1                 ; 6       ;
 ; SW[15]                            ;                   ;         ;
 ;      - hexdriver:hex_3|WideOr6~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr5~0  ; 0                 ; 6       ;
@@ -1634,16 +1648,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - hexdriver:hex_3|WideOr2~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr1~0  ; 0                 ; 6       ;
 ;      - hexdriver:hex_3|WideOr0~0  ; 0                 ; 6       ;
+;      - LEDR[15]~output            ; 0                 ; 6       ;
 ; SW[16]                            ;                   ;         ;
 ;      - hexdriver:hex_4|Decoder0~0 ; 0                 ; 6       ;
 ;      - hexdriver:hex_4|Decoder0~1 ; 0                 ; 6       ;
 ;      - hexdriver:hex_4|Decoder0~2 ; 0                 ; 6       ;
+;      - LEDR[16]~output            ; 0                 ; 6       ;
 ;      - HEX4[4]~output             ; 0                 ; 6       ;
 ; SW[17]                            ;                   ;         ;
-;      - hexdriver:hex_4|Decoder0~0 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~1 ; 0                 ; 6       ;
-;      - hexdriver:hex_4|Decoder0~2 ; 0                 ; 6       ;
-;      - HEX4[6]~output             ; 0                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~0 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~1 ; 1                 ; 6       ;
+;      - hexdriver:hex_4|Decoder0~2 ; 1                 ; 6       ;
+;      - LEDR[17]~output            ; 1                 ; 6       ;
+;      - HEX4[6]~output             ; 1                 ; 6       ;
 +-----------------------------------+-------------------+---------+
 
 
@@ -1652,14 +1669,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 52 / 342,891 ( < 1 % ) ;
-; C16 interconnects     ; 19 / 10,120 ( < 1 % )  ;
-; C4 interconnects      ; 79 / 209,544 ( < 1 % ) ;
+; Block interconnects   ; 70 / 342,891 ( < 1 % ) ;
+; C16 interconnects     ; 86 / 10,120 ( < 1 % )  ;
+; C4 interconnects      ; 75 / 209,544 ( < 1 % ) ;
 ; Direct links          ; 3 / 342,891 ( < 1 % )  ;
 ; Global clocks         ; 0 / 20 ( 0 % )         ;
 ; Local interconnects   ; 0 / 119,088 ( 0 % )    ;
-; R24 interconnects     ; 13 / 9,963 ( < 1 % )   ;
-; R4 interconnects      ; 41 / 289,782 ( < 1 % ) ;
+; R24 interconnects     ; 49 / 9,963 ( < 1 % )   ;
+; R4 interconnects      ; 47 / 289,782 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
@@ -1751,22 +1768,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Status       ; ID        ; Category                          ; Rule Description                                                                                     ; Severity ; Information                                                              ; Area                ; Extra Information ;
 +--------------+-----------+-----------------------------------+------------------------------------------------------------------------------------------------------+----------+--------------------------------------------------------------------------+---------------------+-------------------+
 ; Inapplicable ; IO_000002 ; Capacity Checks                   ; Number of clocks in an I/O bank should not exceed the number of clocks available.                    ; Critical ; No Global Signal assignments found.                                      ; I/O                 ;                   ;
-; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000003 ; Capacity Checks                   ; Number of pins in a Vrefgroup should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Pass         ; IO_000001 ; Capacity Checks                   ; Number of pins in an I/O bank should not exceed the number of locations available.                   ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000004 ; Voltage Compatibility Checks      ; The I/O bank should support the requested VCCIO.                                                     ; Critical ; No IOBANK_VCCIO assignments found.                                       ; I/O                 ;                   ;
 ; Inapplicable ; IO_000005 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VREF values.                                                  ; Critical ; No VREF I/O Standard assignments found.                                  ; I/O                 ;                   ;
 ; Pass         ; IO_000006 ; Voltage Compatibility Checks      ; The I/O bank should not have competing VCCIO values.                                                 ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000007 ; Valid Location Checks             ; Checks for unavailable locations.                                                                    ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000008 ; Valid Location Checks             ; Checks for reserved locations.                                                                       ; Critical ; No reserved LogicLock region found.                                      ; I/O                 ;                   ;
-; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.                               ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                                           ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                                       ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
-; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                                       ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
-; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
-; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                                      ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
-; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                                                ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
 ; Inapplicable ; IO_000022 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Bus Hold value.                                        ; Critical ; No Enable Bus-Hold Circuitry assignments found.                          ; I/O                 ;                   ;
 ; Inapplicable ; IO_000021 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Weak Pull Up value.                                    ; Critical ; No Weak Pull-Up Resistor assignments found.                              ; I/O                 ;                   ;
+; Inapplicable ; IO_000046 ; I/O Properties Checks for One I/O ; The location should support the requested Slew Rate value.                                           ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000023 ; I/O Properties Checks for One I/O ; The I/O standard should support the Open Drain value.                                                ; Critical ; No open drain assignments found.                                         ; I/O                 ;                   ;
+; Pass         ; IO_000024 ; I/O Properties Checks for One I/O ; The I/O direction should support the On Chip Termination value.                                      ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000026 ; I/O Properties Checks for One I/O ; On Chip Termination and Current Strength should not be used at the same time.                        ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
+; Inapplicable ; IO_000027 ; I/O Properties Checks for One I/O ; Weak Pull Up and Bus Hold should not be used at the same time.                                       ; Critical ; No Enable Bus-Hold Circuitry or Weak Pull-Up Resistor assignments found. ; I/O                 ;                   ;
+; Inapplicable ; IO_000045 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Slew Rate value.                                       ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
+; Inapplicable ; IO_000047 ; I/O Properties Checks for One I/O ; On Chip Termination and Slew Rate should not be used at the same time.                               ; Critical ; No Slew Rate assignments found.                                          ; I/O                 ;                   ;
 ; Pass         ; IO_000020 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested PCI Clamp Diode.                                       ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Pass         ; IO_000019 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested On Chip Termination value.                             ; Critical ; 0 such failures found.                                                   ; I/O                 ;                   ;
 ; Inapplicable ; IO_000018 ; I/O Properties Checks for One I/O ; The I/O standard should support the requested Current Strength.                                      ; Critical ; No Current Strength assignments found.                                   ; I/O                 ;                   ;
@@ -1787,49 +1804,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; I/O Rules Matrix                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
-; Pin/Rules          ; IO_000002    ; IO_000001 ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000047    ; IO_000046    ; IO_000045    ; IO_000027    ; IO_000026    ; IO_000024    ; IO_000023    ; IO_000022    ; IO_000021    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
+; Pin/Rules          ; IO_000002    ; IO_000003 ; IO_000001 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000022    ; IO_000021    ; IO_000046    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000047    ; IO_000020    ; IO_000019    ; IO_000018    ; IO_000015    ; IO_000014    ; IO_000013    ; IO_000012    ; IO_000011    ; IO_000010 ; IO_000009 ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+--------------+-----------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+-----------+-----------+--------------+--------------+
-; Total Pass         ; 0            ; 108       ; 108       ; 0            ; 0            ; 108       ; 108       ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 30           ; 0            ; 0            ; 0            ; 25           ; 30           ; 0            ; 25           ; 0            ; 0            ; 30           ; 0            ; 108       ; 108       ; 108       ; 0            ; 0            ;
+; Total Pass         ; 0            ; 108       ; 108       ; 0            ; 0            ; 108       ; 108       ; 0            ; 0            ; 0            ; 0            ; 0            ; 30           ; 0            ; 0            ; 0            ; 0            ; 25           ; 30           ; 0            ; 25           ; 0            ; 0            ; 30           ; 0            ; 108       ; 108       ; 108       ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 108          ; 0         ; 0         ; 108          ; 108          ; 0         ; 0         ; 108          ; 108          ; 108          ; 108          ; 108          ; 108          ; 78           ; 108          ; 108          ; 108          ; 83           ; 78           ; 108          ; 83           ; 108          ; 108          ; 78           ; 108          ; 0         ; 0         ; 0         ; 108          ; 108          ;
+; Total Inapplicable ; 108          ; 0         ; 0         ; 108          ; 108          ; 0         ; 0         ; 108          ; 108          ; 108          ; 108          ; 108          ; 78           ; 108          ; 108          ; 108          ; 108          ; 83           ; 78           ; 108          ; 83           ; 108          ; 108          ; 78           ; 108          ; 0         ; 0         ; 0         ; 108          ; 108          ;
 ; Total Fail         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
 ; CLOCK_50           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK2_50          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; CLOCK3_50          ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDG[8]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[8]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[9]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[10]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[11]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[12]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[13]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[14]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[15]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[16]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; LEDR[17]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDG[8]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[6]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[7]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[8]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[9]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[10]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[11]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[12]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[13]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[14]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[15]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[16]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; LEDR[17]           ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[1]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[2]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[3]             ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; HEX0[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; HEX0[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; HEX0[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; HEX0[0]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; HEX0[1]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; HEX0[2]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[3]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[4]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; HEX0[5]            ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1944,12 +1961,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device EP4CE115F29C7 for design "DE2_115"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
-Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
     Info (176445): Device EP4CE40F29C7 is compatible
     Info (176445): Device EP4CE40F29I7 is compatible
@@ -1999,44 +2015,44 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 25 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 10
-    Info (169178): Pin CLOCK2_50 uses I/O standard 3.3-V LVTTL at AG14 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 11
-    Info (169178): Pin CLOCK3_50 uses I/O standard 3.3-V LVTTL at AG15 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 12
-    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at M23 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at M21 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Info (169178): Pin KEY[2] uses I/O standard 3.3-V LVTTL at N21 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Info (169178): Pin KEY[3] uses I/O standard 3.3-V LVTTL at R24 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at AB28 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at AC28 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at AC27 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at AD27 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at AB27 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at AC26 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at AD26 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at AB26 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at AC25 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at AB25 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[10] uses I/O standard 3.3-V LVTTL at AC24 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[11] uses I/O standard 3.3-V LVTTL at AB24 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[12] uses I/O standard 3.3-V LVTTL at AB23 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[13] uses I/O standard 3.3-V LVTTL at AA24 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[14] uses I/O standard 3.3-V LVTTL at AA23 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[15] uses I/O standard 3.3-V LVTTL at AA22 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[16] uses I/O standard 3.3-V LVTTL at Y24 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-    Info (169178): Pin SW[17] uses I/O standard 3.3-V LVTTL at Y23 File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 22
-Info (144001): Generated suppressed messages file /home/heathsmith/repos/csce-611-projects/lab_hex/DE2_115.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1191 megabytes
-    Info: Processing ended: Thu Sep 29 19:04:20 2022
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 10
+    Info (169178): Pin CLOCK2_50 uses I/O standard 3.3-V LVTTL at AG14 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 11
+    Info (169178): Pin CLOCK3_50 uses I/O standard 3.3-V LVTTL at AG15 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 12
+    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at M23 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at M21 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Info (169178): Pin KEY[2] uses I/O standard 3.3-V LVTTL at N21 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Info (169178): Pin KEY[3] uses I/O standard 3.3-V LVTTL at R24 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at AB28 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at AC28 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at AC27 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at AD27 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at AB27 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at AC26 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at AD26 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at AB26 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at AC25 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at AB25 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[10] uses I/O standard 3.3-V LVTTL at AC24 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[11] uses I/O standard 3.3-V LVTTL at AB24 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[12] uses I/O standard 3.3-V LVTTL at AB23 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[13] uses I/O standard 3.3-V LVTTL at AA24 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[14] uses I/O standard 3.3-V LVTTL at AA23 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[15] uses I/O standard 3.3-V LVTTL at AA22 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[16] uses I/O standard 3.3-V LVTTL at Y24 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+    Info (169178): Pin SW[17] uses I/O standard 3.3-V LVTTL at Y23 File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 22
+Info (144001): Generated suppressed messages file /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/DE2_115.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1995 megabytes
+    Info: Processing ended: Fri Oct  7 16:20:16 2022
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /home/heathsmith/repos/csce-611-projects/lab_hex/DE2_115.fit.smsg.
+The suppressed messages can be found in /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/DE2_115.fit.smsg.
 
 

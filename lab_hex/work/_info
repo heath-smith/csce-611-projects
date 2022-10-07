@@ -1,0 +1,96 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex
+T_opt
+!s110 1665177188
+VkZbFP5Zm@^FXfnb@c<T;M2
+04 6 4 work simtop fast 0
+=1-000ae431a4f1-63409664-83449-183c3
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.1;71
+R0
+vhexdriver
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1665177369
+!i10b 1
+!s100 ?Qol<nMXKJSjfIW:fe>PX3
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IPL?;jkjWo`oX0CUUQ5aPF3
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z6 w1665173733
+8hexdriver.sv
+Fhexdriver.sv
+!i122 20
+L0 1 42
+Z7 OL;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1665177369.000000
+!s107 top.sv|simtop.sv|hexdriver.sv|
+Z9 !s90 -pedanticerrors|-lint|-hazards|-source|-stats=all|hexdriver.sv|simtop.sv|top.sv|
+!i113 0
+Z10 o-pedanticerrors -lint -hazards -source -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vsimtop
+R2
+R3
+!i10b 1
+!s100 GXC5BnU4FhcoDB@^^M4W:0
+R4
+I9S8MGK0_AzKI@e[l[f5Kc3
+R5
+S1
+R0
+w1665177183
+8simtop.sv
+Fsimtop.sv
+!i122 20
+L0 6 102
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 top.sv|simtop.sv|hexdriver.sv|
+R9
+!i113 0
+R10
+R1
+vtop
+R2
+R3
+!i10b 1
+!s100 <N2@if8koZzQoNk3P3:L31
+R4
+Ii4ziCJzMmfQZF<iKM8:Zf2
+R5
+S1
+R0
+R6
+8top.sv
+Ftop.sv
+!i122 20
+L0 7 117
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1

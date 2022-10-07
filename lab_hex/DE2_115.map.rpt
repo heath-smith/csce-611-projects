@@ -1,6 +1,6 @@
 Analysis & Synthesis report for DE2_115
-Thu Sep 29 19:04:09 2022
-Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
+Fri Oct  7 16:20:05 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -17,19 +17,18 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
   9. Port Connectivity Checks: "hexdriver:hex_7"
  10. Port Connectivity Checks: "hexdriver:hex_6"
  11. Port Connectivity Checks: "hexdriver:hex_5"
- 12. Port Connectivity Checks: "hexdriver:hex_4"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -39,29 +38,28 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 29 19:04:09 2022       ;
-; Quartus Prime Version              ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
-; Revision Name                      ; DE2_115                                     ;
-; Top-level Entity Name              ; top                                         ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 31                                          ;
-;     Total combinational functions  ; 31                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 108                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct  7 16:20:05 2022           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; DE2_115                                         ;
+; Top-level Entity Name              ; top                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 31                                              ;
+;     Total combinational functions  ; 31                                              ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 108                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -155,8 +153,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,14 +164,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
-; top.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv       ;         ;
-; hexdriver.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/heathsmith/repos/csce-611-projects/lab_hex/hexdriver.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv       ;         ;
+; hexdriver.sv                     ; yes             ; User SystemVerilog HDL File  ; /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/hexdriver.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -202,9 +200,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; SW[0]~input ;
-; Maximum fan-out                             ; 7           ;
-; Total fan-out                               ; 260         ;
-; Average fan-out                             ; 1.05        ;
+; Maximum fan-out                             ; 8           ;
+; Total fan-out                               ; 278         ;
+; Average fan-out                             ; 1.13        ;
 +---------------------------------------------+-------------+
 
 
@@ -265,30 +263,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+-------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "hexdriver:hex_4" ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; val[3..2] ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 108                         ;
-; cycloneiii_lcell_comb ; 61                          ;
-;     normal            ; 61                          ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     normal            ; 38                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 28                          ;
+;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 3                           ;
 ;         4 data inputs ; 28                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.89                        ;
+; Average LUT depth     ; 1.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -306,89 +295,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Thu Sep 29 19:04:02 2022
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Fri Oct  7 16:19:53 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115 -c DE2_115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 7
+    Info (12023): Found entity 1: top File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
-    Info (12023): Found entity 1: hexdriver File: /home/heathsmith/repos/csce-611-projects/lab_hex/hexdriver.sv Line: 1
+    Info (12023): Found entity 1: hexdriver File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/hexdriver.sv Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.sv(43): object "ledclk" assigned a value but never read File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 43
-Warning (10036): Verilog HDL or VHDL warning at top.sv(52): object "ledstate" assigned a value but never read File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 52
-Warning (10230): Verilog HDL assignment warning at top.sv(65): truncated value with size 26 to match size of target (24) File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 65
-Info (12128): Elaborating entity "hexdriver" for hierarchy "hexdriver:hex_0" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 78
+Warning (10036): Verilog HDL or VHDL warning at top.sv(43): object "ledclk" assigned a value but never read File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 43
+Warning (10036): Verilog HDL or VHDL warning at top.sv(54): object "ledstate" assigned a value but never read File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at top.sv(73): truncated value with size 26 to match size of target (24) File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 73
+Warning (10855): Verilog HDL warning at top.sv(72): initial value for variable seg_4 should be constant File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at top.sv(98): truncated value with size 32 to match size of target (24) File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 98
+Info (12128): Elaborating entity "hexdriver" for hierarchy "hexdriver:hex_0" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 85
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDG[0]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDG[8]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 15
-    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[10]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[11]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[12]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[13]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[14]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[15]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[16]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "LEDR[17]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 16
-    Warning (13410): Pin "HEX4[1]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 29
-    Warning (13410): Pin "HEX5[0]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[1]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[2]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[4]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[5]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 30
-    Warning (13410): Pin "HEX6[0]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[1]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[2]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[3]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[4]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[5]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX6[6]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 31
-    Warning (13410): Pin "HEX7[0]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[1]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[2]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[3]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[4]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[5]" is stuck at VCC File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "LEDG[8]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 15
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 29
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX5[6]" is stuck at VCC File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 30
+    Warning (13410): Pin "HEX6[0]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[1]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[2]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[3]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[4]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[5]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX6[6]" is stuck at VCC File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 31
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_50" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 10
-    Warning (15610): No output dependent on input pin "CLOCK2_50" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 11
-    Warning (15610): No output dependent on input pin "CLOCK3_50" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 12
-    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Warning (15610): No output dependent on input pin "KEY[1]" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Warning (15610): No output dependent on input pin "KEY[2]" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/heathsmith/repos/csce-611-projects/lab_hex/top.sv Line: 19
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 10
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 11
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 12
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Warning (15610): No output dependent on input pin "KEY[1]" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Warning (15610): No output dependent on input pin "KEY[2]" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
+    Warning (15610): No output dependent on input pin "KEY[3]" File: /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_hex/top.sv Line: 19
 Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 83 output pins
     Info (21061): Implemented 31 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 414 megabytes
-    Info: Processing ended: Thu Sep 29 19:04:10 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 950 megabytes
+    Info: Processing ended: Fri Oct  7 16:20:05 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -1,0 +1,40 @@
+# vsim -pedanticerrors -hazards -c -sva -immedassert work.simtop -do "/dev/stdin" 
+# Start time: 17:16:10 on Oct 07,2022
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  Questa Sim-64
+# //  Version 2020.1 linux_x86_64 Jan 28 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.simtop(fast)
+# do /dev/stdin
+# -----------------------------
+# HEX0 test 1 PASS
+# HEX0 test 2 PASS
+# -----------------------------
+# HEX1 test 1 PASS
+# HEX1 test 2 PASS
+# -----------------------------
+# HEX2 test 1 PASS
+# HEX2 test 2 PASS
+# -----------------------------
+# HEX3 test 1 PASS
+# HEX3 test 2 PASS
+# -----------------------------
+# HEX4 test 1 PASS
+# HEX4 test 2 PASS
+# -----------------------------
+# 
+# <EOF>
+# End time: 17:16:11 on Oct 07,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

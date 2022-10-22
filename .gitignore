@@ -5,3 +5,5 @@
 
 **/build
 **/incremental_db
+
+*.bak

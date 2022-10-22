@@ -16,7 +16,7 @@ module simdecoder;
 
     // read test vectors
     initial begin
-        $readmemb("./testdecoder.mem", testvectors);
+        $readmemb("../../testdecoder.mem", testvectors);
         vectornum = 32'b0; errors=32'b0;
         reset = 1'b1; #20; reset = 1'b0;
     end

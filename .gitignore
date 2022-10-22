@@ -2,3 +2,6 @@
 **/db
 *.rpt
 *.done
+
+**/build
+**/incremental_db

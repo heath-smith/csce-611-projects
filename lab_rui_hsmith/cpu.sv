@@ -1,7 +1,8 @@
 module cpu(
     input logic clk,
     input logic rst_n,
-    input [17:0] SW
+    input [31:0] cpu_in,
+    output [31:0] cpu_out
 );
 
     // Set up instruction memory

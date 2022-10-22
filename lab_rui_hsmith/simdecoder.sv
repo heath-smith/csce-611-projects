@@ -5,9 +5,9 @@ module simdecoder;
     logic clk, reset;
     logic [31:0] vectornum, errors;
     logic [31:0] testvectors[10000:0];
-    logic instruction_EX [31:0];
+    logic [31:0] instruction_EX;
 
-    decoder dut();
+    //decoder dut();
 
     // generate clock
     always begin
@@ -16,7 +16,7 @@ module simdecoder;
 
     // read test vectors
     initial begin
-        $readmemb("testdecoder.dat", testvectors);
+        $readmemb("./testdecoder.mem", testvectors);
         vectornum = 32'b0; errors=32'b0;
         reset = 1'b1; #20; reset = 1'b0;
     end
@@ -24,7 +24,18 @@ module simdecoder;
     // apply test vectors on rising clock edge
     always @(posedge clk) begin
         instruction_EX = testvectors[vectornum];
-        $display(instruction_EX);
+
     end
 
+    always @(negedge clk) begin
+        $display("%d : %h", vectornum, instruction_EX);
+        vectornum = vectornum + 32'b1;
+        if (testvectors[vectornum] === 32'bx) begin
+            $display(
+                "%d tests completed with %d errors",
+                vectornum, errors);
+            $finish;
+        end
+    end
 
+endmodule

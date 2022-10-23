@@ -23,13 +23,13 @@ module controller(
 
     // selects regfile 'writedata' between ALU R output
     // and GPIO input and shifted imm field from U-type format
-    output logic [0:0] regsel,
+    output logic [1:0] regsel,
 
     // the ALU operation code
     output logic [3:0] aluop,
 
     // enables writing to GPIO register (csrrw instruction)
-    output logic [0:0]  gpio_we,
+    output logic [0:0] gpio_we,
 );
 
     // controller logic signals
@@ -41,33 +41,45 @@ module controller(
         // set defaults here
         case (opcode_EX)
             // I-type instructions
-            b'70010011:
+            // alusrc gets a 1 - we want mux to return imm12 sign-extended in mux
+            // regwrite gets a 1 - we want to immediately write back to regfile
+            7'b0010011:
                 begin
-                    (funct3_EX == 3'b000) ? controls = 8'b00000000 :
-                    ;
-                end
-            // R-type instructions
-            b'70110011:
-                begin
-                end
-            // U-type instructions
-            b'70110111:
-                begin
-                end
-            // Control and Status Register instructions
-            b'1110011:
-                begin
+                    controls =
+                        (funct3_EX == 3'b000) ? 8'b1_1_10_0011_0 :           // addi
+                        (funct3_EX == 3'b111) ? 8'b1_1_10_0001_0 :           // andi
+                        (funct3_EX == 3'b110) ? 8'b1_1_10_0010_0 :           // ori
+                        (funct3_EX == 3'b100) ? 8'b1_1_10_0000_0 :           // xori
+                        (funct3_EX == 3'b001
+                            && funct7_EX == 7'b0000000) ? 8'b1_1_10_1000_0 : // slli
+                        (funct3_EX == 3'b101
+                            && funct7_EX == 7'b0100000) ? 8'b1_1_10_1010_0 : // srai
+                        (funct3_EX == 3'b101
+                            && funct7_EX == 7'b0000000) ? 8'b1_1_10_1001_0 : // srli
+                        8'bx_x_xx_xxxx_x;
                 end
 
-            default: aluop = 4'bxxxx;   // no op
+            // R-type instructions
+            7'b0110011:
+                begin
+                    controls = 8'bx_x_xx_xxxx_x;
+                end
+
+            // U-type instructions
+            7'b0110111:
+                begin
+                    controls = 8'bx_x_xx_xxxx_x;
+                end
+
+            // Control and Status Register instructions
+            7'b1110011:
+                begin
+                    controls = (funct3_EX == 3'b001) ?
+                end
+
+            default: controls = 8'bx_x_xx_xxxx_x;
 
         endcase
-
-        if () begin
-            //
-        end else begin
-            //
-        end
     end
 
 endmodule

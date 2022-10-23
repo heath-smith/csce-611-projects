@@ -7,7 +7,7 @@ module cpu(
 
     // Set up instruction memory
     logic [31:0] inst_ram [4095:0];
-    initial $readmemh("program.rom",inst_ram);
+    initial $readmemh("../../testcpu.mem",inst_ram);
     logic [11:0] PC_FETCH = 12'd0;
     logic [31:0] instruction_EX;
 

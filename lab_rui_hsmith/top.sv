@@ -43,8 +43,6 @@ module top (
 	assign ledclk = clkdiv[23];
 
 	/* driver for LEDs */
-	//logic [25:0] leds;
-	//assign LEDR = leds[25:8];
 	assign LEDR = SW;
 	//assign LEDG = leds[7:0];
 	assign LEDG = 8'b0000_0000;
@@ -52,17 +50,10 @@ module top (
 	/* LED state register, 0 means going left, 1 means going right */
 	logic ledstate;
 
-	// default 7-seg value
-	logic [3:0] seg_0;
-	logic [3:0] seg_1;
-	logic [3:0] seg_2;
-	logic [3:0] seg_3;
-	logic [3:0] seg_4;
-	assign seg_0 = SW[3:0];
-	assign seg_1 = SW[7:4];
-	assign seg_2 = SW[11:8];
-	assign seg_3 = SW[15:12];
-	assign seg_4[1:0] = SW[17:16];
+	logic [31:0] CPU_in;
+	logic [31:0] CPU_out;
+	assign CPU_in = {14'b0, SW};
+
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -70,18 +61,23 @@ module top (
 
 	initial begin
 		clkdiv = 26'h0;
-		/* set unused bits of seg_4 */
-		seg_4[3:2] = 2'b00;
 	end
 
-	hexdriver hex_0(.val(seg_0), .HEX(HEX0));
-	hexdriver hex_1(.val(seg_1), .HEX(HEX1));
-	hexdriver hex_2(.val(seg_2), .HEX(HEX2));
-	hexdriver hex_3(.val(seg_3), .HEX(HEX3));
-	hexdriver hex_4(.val(seg_4), .HEX(HEX4));
-	hexdriver hex_5(.val(4'b0000), .HEX(HEX5));
-	hexdriver hex_6(.val(4'b0000), .HEX(HEX6));
-	hexdriver hex_7(.val(4'b0000), .HEX(HEX7));
+	cpu _cpu(
+		.clk(CLOCK_50),
+		.rst_n(KEY[0]),
+		.GPIO_in(CPU_in),
+		.GPIO_out(CPU_out)
+	);
+
+	hexdriver hex_0(.val(CPU_out[3:0]), .HEX(HEX0));
+	hexdriver hex_1(.val(CPU_out[7:4]), .HEX(HEX1));
+	hexdriver hex_2(.val(CPU_out[11:8]), .HEX(HEX2));
+	hexdriver hex_3(.val(CPU_out[15:12]), .HEX(HEX3));
+	hexdriver hex_4(.val(CPU_out[19:16]), .HEX(HEX4));
+	hexdriver hex_5(.val(CPU_out[23:20]), .HEX(HEX5));
+	hexdriver hex_6(.val(CPU_out[27:24]), .HEX(HEX6));
+	hexdriver hex_7(.val(CPU_out[31:28]), .HEX(HEX7));
 
 	always @(posedge CLOCK_50) begin
 		/* drive the clock divider, every 2^26 cycles of CLOCK_50, the

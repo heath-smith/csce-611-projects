@@ -74,6 +74,7 @@ module cpu(
         .opcode_EX(opcode_EX),
         .funct3_EX(funct3_EX),
         .funct7_EX(funct7_EX),
+        .csr_EX(csr_EX),
         // outputs
         .alusrc(alusrc_EX),
         .regwrite(regwrite_EX),
@@ -153,36 +154,37 @@ module cpu(
             imm20_WB <= { imm20_EX, 12'b0 };
             R_WB <= R_EX;
 
-            GPIO_in_WB <= (GPIO_we) ? GPIO_in : 32'd0;
-            CPU_out <= (GPIO_we) ? readdata1 : 32'd0;
+            GPIO_in_WB <= (GPIO_we) ? GPIO_in : 32'bx;
+            CPU_out <= (GPIO_we) ? readdata1 : 32'bx;
 
         end
     end
 
      always @(negedge clk) begin
-        $display("-----------------------------------------------");
-        //$display("process counter ---> %d", PC_FETCH);
-        $display("loaded instruction ---> %b", inst_ram[PC_FETCH]);
-        $display("imm12_EX ---> %b", imm12_EX);
-        $display("imm12_EX_32 ---> %b", imm12_EX_32);
+        //$display("-----------------------------------------------");
+        $display("process counter ---> %d", PC_FETCH);
+        $display("loaded instruction ---> %h", inst_ram[PC_FETCH]);
+        //$display("imm12_EX ---> %b", imm12_EX);
+        //$display("imm12_EX_32 ---> %b", imm12_EX_32);
         //$display(" ----- Controller Outputs ----- ");
         //$display("alusrc_EX ---> %b", alusrc_EX);
         //$display("regwrite_EX ---> %b", regwrite_EX);
         //$display("regsel_EX ---> %b", regsel_EX);
         //$display("aluop_EX ---> %b", aluop_EX);
-        //$display("GPIO_we ---> %b", GPIO_we);
         //$display("------------------------");
-        $display("rs1_EX ---> %b", rs1_EX);
+        //$display("rs1_EX ---> %b", rs1_EX);
         //$display("rs2_EX ---> %b", rs2_EX);
-        $display("rd_EX ---> %b", rd_EX);
-        $display("readdata1 ---> %b", readdata1);
+        //$display("rd_EX ---> %b", rd_EX);
+        //$display("readdata1 ---> %d", readdata1);
         //$display("readdata2 ---> %b", readdata2);
-        //$display("writedata_WB ---> %b", writedata_WB);
+        //$display("writedata_WB ---> %d", writedata_WB);
         //$display("regsel_WB ---> %b", regsel_WB);
-        $display("B_EX ---> %h", B_EX);
-        $display("R_EX ---> %h", R_EX);
-        $display("R_WB ---> %h", R_WB);
-        $display("-----------------------------------------------");
+        //$display("B_EX ---> %d", B_EX);
+        //$display("R_EX ---> %h", R_EX);
+        //$display("R_WB ---> %h", R_WB);
+        //$display("CPU_out ---> %h", CPU_out);
+        //$display("GPIO_we ---> %b", GPIO_we);
+        //$display("-----------------------------------------------");
      end
 
 endmodule

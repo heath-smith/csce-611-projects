@@ -74,21 +74,21 @@ module controller(
                         (funct3_EX == 3'b100
                             && funct7_EX == 7'b0000000) ? 9'b0_1_10_0010_0 :    // xor
                         (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // sll
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1000_0 :   // sll
                         (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0100000) ? 9'bx_x_xx_xxxx_x :   // sra
+                            && funct7_EX == 7'b0100000) ? 9'b0_1_10_1010_0 :   // sra
                         (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // srl
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1001_0 :   // srl
                         (funct3_EX == 3'b010
-                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // slt
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1100_0 :   // slt
                         (funct3_EX == 3'b011
-                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // sltu
-                        (funct3_EX == 3'000
-                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mul
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1101_0 :   // sltu
+                        (funct3_EX == 3'b000
+                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0101_0 :   // mul
                         (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mulh
+                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0110_0 :   // mulh
                         (funct3_EX == 3'b011
-                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mulhu
+                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0111_0 :   // mulhu
                         9'bx_x_xx_xxxx_x;
                 end
 
@@ -103,8 +103,8 @@ module controller(
                 begin
                     // cssrw
                     controls =
-                        (csr_EX == 7'hf02) ? 9'bx_0_xx_xxxx_1 : // HEX
-                        (csr_EX == 7'hf00) ? 9'bx_1_00_xxxx_0 : // SW
+                        (csr_EX == 12'b111100000010) ? 9'bx_0_xx_xxxx_1 : // HEX
+                        (csr_EX == 12'b111100000000) ? 9'bx_1_00_xxxx_0 : // SW
                         9'bx_x_xx_xxxx_x;
                 end
 

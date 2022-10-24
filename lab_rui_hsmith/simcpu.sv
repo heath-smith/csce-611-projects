@@ -23,9 +23,8 @@ module simcpu;
         rst_n = 1'b1;
     end
 
-    //always @(posedge clk) begin
-        //$display("CPU result --->  %h", GPIO_out);
-    //    $display(" ----- Positive Clock Edge ----- ");
-    //end
+    always @(posedge clk) begin
+        $display("CPU output --->  %h", GPIO_out);
+    end
 
 endmodule

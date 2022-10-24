@@ -14,16 +14,16 @@ module mux3(
 
     mux mux1(
         .a(a),
-        .b(b),
+        .b(c),
         .s(s[1]),
         .y(temp)
     );
 
     mux mux2(
         .a(temp),
-        .b(c),
+        .b(b),
         .s(s[0]),
         .y(y)
-    )
+    );
 
 endmodule

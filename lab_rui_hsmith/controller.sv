@@ -29,7 +29,7 @@ module controller(
     output logic [3:0] aluop,
 
     // enables writing to GPIO register (csrrw instruction)
-    output logic [0:0] gpio_we,
+    output logic [0:0] gpio_we
 );
 
     // controller logic signals
@@ -46,38 +46,69 @@ module controller(
             7'b0010011:
                 begin
                     controls =
-                        (funct3_EX == 3'b000) ? 8'b1_1_10_0011_0 :           // addi
-                        (funct3_EX == 3'b111) ? 8'b1_1_10_0001_0 :           // andi
-                        (funct3_EX == 3'b110) ? 8'b1_1_10_0010_0 :           // ori
-                        (funct3_EX == 3'b100) ? 8'b1_1_10_0000_0 :           // xori
+                        (funct3_EX == 3'b000) ? 9'b1_1_10_0011_0 :           // addi
+                        (funct3_EX == 3'b111) ? 9'b1_1_10_0001_0 :           // andi
+                        (funct3_EX == 3'b110) ? 9'b1_1_10_0010_0 :           // ori
+                        (funct3_EX == 3'b100) ? 9'b1_1_10_0000_0 :           // xori
                         (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000000) ? 8'b1_1_10_1000_0 : // slli
+                            && funct7_EX == 7'b0000000) ? 9'b1_1_10_1000_0 : // slli
                         (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0100000) ? 8'b1_1_10_1010_0 : // srai
+                            && funct7_EX == 7'b0100000) ? 9'b1_1_10_1010_0 : // srai
                         (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0000000) ? 8'b1_1_10_1001_0 : // srli
-                        8'bx_x_xx_xxxx_x;
+                            && funct7_EX == 7'b0000000) ? 9'b1_1_10_1001_0 : // srli
+                        9'bx_x_xx_xxxx_x;
                 end
 
             // R-type instructions
             7'b0110011:
                 begin
-                    controls = 8'bx_x_xx_xxxx_x;
+                    controls =
+                        (funct3_EX == 3'b000
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0011_0 :    // add
+                        (funct3_EX == 3'b000
+                            && funct7_EX == 7'b0100000) ? 9'b0_1_10_0100_0 :    // sub
+                        (funct3_EX == 3'b111
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0000_0 :    // and
+                        (funct3_EX == 3'b110
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0001_0 :    // or
+                        (funct3_EX == 3'b100
+                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0010_0 :    // xor
+                        (funct3_EX == 3'b001
+                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // sll
+                        (funct3_EX == 3'b101
+                            && funct7_EX == 7'b0100000) ? 9'bx_x_xx_xxxx_x :   // sra
+                        (funct3_EX == 3'b101
+                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // srl
+                        (funct3_EX == 3'b010
+                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // slt
+                        (funct3_EX == 3'b011
+                            && funct7_EX == 7'b0000000) ? 9'bx_x_xx_xxxx_x :   // sltu
+                        (funct3_EX == 3'000
+                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mul
+                        (funct3_EX == 3'b001
+                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mulh
+                        (funct3_EX == 3'b011
+                            && funct7_EX == 7'b0000001) ? 9'bx_x_xx_xxxx_x :   // mulhu
+                        9'bx_x_xx_xxxx_x;
                 end
 
             // U-type instructions
             7'b0110111:
                 begin
-                    controls = 8'bx_x_xx_xxxx_x;
+                    controls = 9'bx_1_01_xxxx_0;    // lui
                 end
 
             // Control and Status Register instructions
             7'b1110011:
                 begin
-                    controls = (funct3_EX == 3'b001) ?
+                    // cssrw
+                    controls =
+                        (csr_EX == 7'hf02) ? 9'bx_0_xx_xxxx_1 : // HEX
+                        (csr_EX == 7'hf00) ? 9'bx_1_00_xxxx_0 : // SW
+                        9'bx_x_xx_xxxx_x;
                 end
 
-            default: controls = 8'bx_x_xx_xxxx_x;
+            default: controls = 9'bx_x_xx_xxxx_x;
 
         endcase
     end

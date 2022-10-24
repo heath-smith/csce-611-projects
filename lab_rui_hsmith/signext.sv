@@ -6,6 +6,6 @@ module signext(
 
 // sign extend using most significant bit
 // of 12-bit input value
-assign out32 = {{20{in12[11]}}, in12};
+assign out32 = { {20{in12[11]}}, in12};
 
 endmodule

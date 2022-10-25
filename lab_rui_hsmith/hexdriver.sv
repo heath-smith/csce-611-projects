@@ -35,7 +35,7 @@ module hexdriver (input [3:0] val, output logic [6:0] HEX);
 			4'd13: HEX = 7'b010_0001;  // d
 			4'd14: HEX = 7'b000_0110;  // E
 			4'd15: HEX = 7'b000_1110;  // F
-			default: HEX = 7'b000_0000;  // off
+			default: HEX = 7'b011_1111;  // off
 		endcase
 	end
 

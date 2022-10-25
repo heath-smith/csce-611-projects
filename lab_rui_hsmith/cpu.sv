@@ -7,7 +7,7 @@ module cpu(
 
     // Set up instruction memory
     logic [31:0] inst_ram [4095:0];
-    initial $readmemh("../../testcpu.mem",inst_ram);
+    initial $readmemh("./testcpu.mem",inst_ram);
     logic [11:0] PC_FETCH = 12'd0;
     logic [31:0] instruction_EX;
 
@@ -141,8 +141,8 @@ module cpu(
             R_WB <= 32'd0;              // alu output signal
 
             // GPIO signals
-            GPIO_in_WB <= 32'd0;
-            CPU_out <= 32'd0;
+            GPIO_in_WB <= 32'b0;
+            CPU_out <= 32'b0;
 
         end else begin
             PC_FETCH <= PC_FETCH + 1'b1;
@@ -153,17 +153,18 @@ module cpu(
             regsel_WB <= regsel_EX;
             imm20_WB <= { imm20_EX, 12'b0 };
             R_WB <= R_EX;
-
-            GPIO_in_WB <= (GPIO_we) ? GPIO_in : 32'bx;
-            CPU_out <= (GPIO_we) ? readdata1 : 32'bx;
-
+	
+            if (GPIO_we) begin
+					GPIO_in_WB <= GPIO_in;
+					CPU_out <= readdata1;
+				end
         end
     end
 
      always @(negedge clk) begin
-        //$display("-----------------------------------------------");
-        $display("process counter ---> %d", PC_FETCH);
-        $display("loaded instruction ---> %h", inst_ram[PC_FETCH]);
+        $display("-----------------------------------------------");
+        //$display("process counter ---> %d", PC_FETCH);
+        //$display("loaded instruction ---> %h", inst_ram[PC_FETCH]);
         //$display("imm12_EX ---> %b", imm12_EX);
         //$display("imm12_EX_32 ---> %b", imm12_EX_32);
         //$display(" ----- Controller Outputs ----- ");
@@ -182,9 +183,10 @@ module cpu(
         //$display("B_EX ---> %d", B_EX);
         //$display("R_EX ---> %h", R_EX);
         //$display("R_WB ---> %h", R_WB);
-        //$display("CPU_out ---> %h", CPU_out);
-        //$display("GPIO_we ---> %b", GPIO_we);
-        //$display("-----------------------------------------------");
+        $display("CPU_out ---> %h", CPU_out);
+        $display("GPIO_we ---> %b", GPIO_we);
+	$display("GPIO_out ---> %h", GPIO_out);
+        $display("-----------------------------------------------");
      end
 
 endmodule

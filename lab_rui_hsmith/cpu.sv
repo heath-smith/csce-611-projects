@@ -7,7 +7,7 @@ module cpu(
 
     // Set up instruction memory
     logic [31:0] inst_ram [4095:0];
-    initial $readmemh("./testcpu.mem",inst_ram);
+    initial $readmemh("../../instmem.dat",inst_ram);
     logic [11:0] PC_FETCH = 12'd0;
     logic [31:0] instruction_EX;
 
@@ -155,18 +155,19 @@ module cpu(
             R_WB <= R_EX;
 	
             if (GPIO_we) begin
-					GPIO_in_WB <= GPIO_in;
-					CPU_out <= readdata1;
-				end
+		GPIO_in_WB <= GPIO_in;
+		CPU_out <= readdata1;
+	    end
         end
     end
 
      always @(negedge clk) begin
         $display("-----------------------------------------------");
         //$display("process counter ---> %d", PC_FETCH);
-        //$display("loaded instruction ---> %h", inst_ram[PC_FETCH]);
+        $display("loaded instruction ---> %h", inst_ram[PC_FETCH]);
         //$display("imm12_EX ---> %b", imm12_EX);
         //$display("imm12_EX_32 ---> %b", imm12_EX_32);
+	$display("imm20_EX ---> %h", imm20_EX);
         //$display(" ----- Controller Outputs ----- ");
         //$display("alusrc_EX ---> %b", alusrc_EX);
         //$display("regwrite_EX ---> %b", regwrite_EX);
@@ -176,7 +177,7 @@ module cpu(
         //$display("rs1_EX ---> %b", rs1_EX);
         //$display("rs2_EX ---> %b", rs2_EX);
         //$display("rd_EX ---> %b", rd_EX);
-        //$display("readdata1 ---> %d", readdata1);
+        $display("readdata1 ---> %d", readdata1);
         //$display("readdata2 ---> %b", readdata2);
         //$display("writedata_WB ---> %d", writedata_WB);
         //$display("regsel_WB ---> %b", regsel_WB);
@@ -184,7 +185,9 @@ module cpu(
         //$display("R_EX ---> %h", R_EX);
         //$display("R_WB ---> %h", R_WB);
         $display("CPU_out ---> %h", CPU_out);
-        $display("GPIO_we ---> %b", GPIO_we);
+	$display("GPIO_in ---> %d", GPIO_in);
+	$display("GPIO_in_WB ---> %b", GPIO_in_WB);
+        //$display("GPIO_we ---> %b", GPIO_we);
 	$display("GPIO_out ---> %h", GPIO_out);
         $display("-----------------------------------------------");
      end

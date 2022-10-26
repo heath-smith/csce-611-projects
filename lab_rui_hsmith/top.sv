@@ -70,21 +70,21 @@ module top (
 		.GPIO_out(CPU_out)
 	);
 
-	hexdriver hex_0(.val(CPU_out[3:0]), .HEX(HEX0));
-	hexdriver hex_1(.val(CPU_out[7:4]), .HEX(HEX1));
-	hexdriver hex_2(.val(CPU_out[11:8]), .HEX(HEX2));
-	hexdriver hex_3(.val(CPU_out[15:12]), .HEX(HEX3));
-	hexdriver hex_4(.val(CPU_out[19:16]), .HEX(HEX4));
-	hexdriver hex_5(.val(CPU_out[23:20]), .HEX(HEX5));
-	hexdriver hex_6(.val(CPU_out[27:24]), .HEX(HEX6));
-	hexdriver hex_7(.val(CPU_out[31:28]), .HEX(HEX7));
+	hexdriver hex_0(.val(CPU_out[3:0]), .HEX(HEX7));
+	hexdriver hex_1(.val(CPU_out[7:4]), .HEX(HEX6));
+	hexdriver hex_2(.val(CPU_out[11:8]), .HEX(HEX5));
+	hexdriver hex_3(.val(CPU_out[15:12]), .HEX(HEX4));
+	hexdriver hex_4(.val(CPU_out[19:16]), .HEX(HEX3));
+	hexdriver hex_5(.val(CPU_out[23:20]), .HEX(HEX2));
+	hexdriver hex_6(.val(CPU_out[27:24]), .HEX(HEX1));
+	hexdriver hex_7(.val(CPU_out[31:28]), .HEX(HEX0));
 
-	always @(posedge CLOCK_50) begin
+	//always @(posedge CLOCK_50) begin
 		/* drive the clock divider, every 2^26 cycles of CLOCK_50, the
 		* top bit will roll over and give us a clock edge for clkdiv
 		* */
-		clkdiv <= clkdiv + 1;
-	end
+		//clkdiv <= clkdiv + 1;
+	//end
 
 
 endmodule

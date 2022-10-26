@@ -5,14 +5,13 @@
 	.data
 guess:	.word	256		# initial guess value
 step:	.word	128		# initial step value
-test:	.word	61440
 
 	.text
 	#li	a7,5		# load sys call 5
 	#ecall			# execute sys call 5
 	
 	#mv	t6,a0
-	lw	a0, test
+	csrrw   a0, 0xf00, t6
 
 	lw	t1,guess	# load initial guess into t1
 	slli	t1,t1,14	# shift left 14 bits
@@ -43,6 +42,7 @@ half:	srli	t2,t2,1		# shift step right by 1 bit
 	
 	b 	exit
 
-exit:	li 	a7,1		# load sys call 1
+exit:	#li 	a7,1		# load sys call 1
 	mv	a0,t1		# display raw result
-	ecall			# execute sys call (result should equal previous ecall)
+	#ecall			# execute sys call (result should equal previous ecall)
+	csrrw t6, 0xf02, a0

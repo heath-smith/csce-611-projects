@@ -4,10 +4,10 @@
 
 	.text
 	# load switches into cpu
-	csrrw   s0, 0xf00, t6
+	#csrrw   s0, 0xf00, zero
 	
 	# value for testing
-	#addi	s0,zero,234
+	addi	s0,zero,234
 	
 	# load constant 0.1 into s1
 	li	s1,429496730
@@ -128,6 +128,12 @@
 
 	or 	t0,t0,t2	# or with register t0 --> t0
 
+	# print value #
+	li 	a7,1
+	mv	a0,t0
+	ecall
+	################	
+	
 	
 	# write destination register to switches
-	csrrw t6, 0xf02, t0
+	#csrrw t6, 0xf02, t0

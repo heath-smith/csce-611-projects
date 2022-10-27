@@ -79,12 +79,5 @@ module top (
 	hexdriver hex_6(.val(CPU_out[27:24]), .HEX(HEX1));
 	hexdriver hex_7(.val(CPU_out[31:28]), .HEX(HEX0));
 
-	//always @(posedge CLOCK_50) begin
-		/* drive the clock divider, every 2^26 cycles of CLOCK_50, the
-		* top bit will roll over and give us a clock edge for clkdiv
-		* */
-		//clkdiv <= clkdiv + 1;
-	//end
-
 
 endmodule

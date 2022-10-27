@@ -8,6 +8,6 @@ module mux(
     output logic [31:0] y
 );
 
-assign y = s ? b : a;
+assign y = (s) ? b : a;
 
 endmodule

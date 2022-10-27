@@ -39,17 +39,20 @@ module controller(
 
     always_comb begin
         // set defaults here
+		  $display("control signals ---> %b", controls);
         case (opcode_EX)
             // I-type instructions
-            // alusrc gets a 1 - we want mux to return imm12 sign-extended in mux
-            // regwrite gets a 1 - we want to immediately write back to regfile
+            // alusrc === gets a 1 - we want to use sign extended imm12 field from mux
+				// 	as input B to the ALU
+            // regwrite === gets a 1 - we want to immediately write back to regfile
+				// regsel === should be 2 (10) so we pick the ALU output
             7'b0010011:
                 begin
                     controls =
                         (funct3_EX == 3'b000) ? 9'b1_1_10_0011_0 :           // addi
-                        (funct3_EX == 3'b111) ? 9'b1_1_10_0001_0 :           // andi
-                        (funct3_EX == 3'b110) ? 9'b1_1_10_0010_0 :           // ori
-                        (funct3_EX == 3'b100) ? 9'b1_1_10_0000_0 :           // xori
+                        (funct3_EX == 3'b111) ? 9'b1_1_10_0000_0 :           // andi
+                        (funct3_EX == 3'b110) ? 9'b1_1_10_0001_0 :           // ori
+                        (funct3_EX == 3'b100) ? 9'b1_1_10_0010_0 :           // xori
                         (funct3_EX == 3'b001
                             && funct7_EX == 7'b0000000) ? 9'b1_1_10_1000_0 : // slli
                         (funct3_EX == 3'b101
@@ -104,8 +107,7 @@ module controller(
                     // cssrw
                     controls =
                         (csr_EX == 12'b111100000010) ? 9'bx_0_xx_xxxx_1 : // HEX
-                        (csr_EX == 12'b111100000000) ? 9'bx_1_00_xxxx_0 : // SW
-                        9'bx_x_xx_xxxx_x;
+																		 9'bx_1_00_xxxx_0; // SW
                 end
 
             default: controls = 9'bx_x_xx_xxxx_x;

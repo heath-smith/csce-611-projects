@@ -43,54 +43,41 @@ module top (
 	assign ledclk = clkdiv[23];
 
 	/* driver for LEDs */
-	logic [25:0] leds;
-	assign LEDR = leds[25:8];
-	assign LEDG = leds[7:0];
+	assign LEDR = SW;
+	//assign LEDG = leds[7:0];
+	assign LEDG = 8'b0000_0000;
 
 	/* LED state register, 0 means going left, 1 means going right */
 	logic ledstate;
 
+	logic [31:0] CPU_in;
+	logic [31:0] CPU_out;
+	assign CPU_in = {14'b0, SW};
 
 //=======================================================
-//  Behavioral coding
+//  Structural coding
 //=======================================================
 
 
 	initial begin
 		clkdiv = 26'h0;
-		/* start at the far right, LEDG0 */
-		leds = 26'b1;
-		/* start out going to the left */
-		ledstate = 1'b0;
 	end
 
-	always @(posedge CLOCK_50) begin
-		/* drive the clock divider, every 2^26 cycles of CLOCK_50, the
-		* top bit will roll over and give us a clock edge for clkdiv
-		* */
-		clkdiv <= clkdiv + 1;
-	end
+	cpu _cpu(
+		.clk(CLOCK_50),
+		.rst_n(KEY[0]),
+		.GPIO_in(CPU_in),
+		.GPIO_out(CPU_out)
+	);
 
-	always @(posedge ledclk) begin
-		/* going left and we are at the far left, time to turn around */
-		if ( (ledstate == 0) && (leds == 26'b10000000000000000000000000) ) begin
-			ledstate <= 1;
-			leds <= leds >> 1;
+	hexdriver hex_0(.val(CPU_out[3:0]), .HEX(HEX7));
+	hexdriver hex_1(.val(CPU_out[7:4]), .HEX(HEX6));
+	hexdriver hex_2(.val(CPU_out[11:8]), .HEX(HEX5));
+	hexdriver hex_3(.val(CPU_out[15:12]), .HEX(HEX4));
+	hexdriver hex_4(.val(CPU_out[19:16]), .HEX(HEX3));
+	hexdriver hex_5(.val(CPU_out[23:20]), .HEX(HEX2));
+	hexdriver hex_6(.val(CPU_out[27:24]), .HEX(HEX1));
+	hexdriver hex_7(.val(CPU_out[31:28]), .HEX(HEX0));
 
-		/* going left and not at the far left, keep going */
-		end else if (ledstate == 0) begin
-			ledstate <= 0;
-			leds <= leds << 1;
-
-		/* going right and we are at the far right, turn around */
-		end else if ( (ledstate == 1) && (leds == 26'b1) ) begin
-			ledstate <= 0;
-			leds <= leds << 1;
-
-		/* going right, and we aren't at the far right */
-		end else begin
-			leds <= leds >> 1;
-		end
-	end
 
 endmodule

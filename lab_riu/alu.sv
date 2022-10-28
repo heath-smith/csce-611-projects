@@ -5,9 +5,12 @@
 
 
 module alu(
+	// inputs
 	input logic  [31:0] A,
 	input logic  [31:0] B,
 	input logic  [ 3:0] op,
+
+	// outputs
 	output logic [31:0] R,
 	output logic zero
 );

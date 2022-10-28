@@ -51,9 +51,9 @@ always_ff @(posedge clk, posedge rst) begin
 end
 
 always_comb begin
-	// $monitor("reg 6: %8h", mem[6]);
-	// $monitor("reg 5: %8h", mem[5]);
-	// $monitor("writeaddr: %8h, we: %1h", writeaddr, we);
+	//$monitor("reg 6: %8h", mem[6]);
+	//$monitor("reg 5: %8h", mem[5]);
+	//$monitor("writeaddr: %8h, we: %1h", writeaddr, we);
 
 	// special case to prevent write bypass from kicking in for reg0
 	if (we && (readaddr1 == 0)) readdata1_buf = 0;

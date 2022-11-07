@@ -1,0 +1,6 @@
+int	simtop__DOT__cpu0__DOT__pc_F
+int	simtop__DOT__cpu0__DOT__pc_EX
+hex	simtop__DOT__cpu0__DOT__regdata_WB
+inst	simtop__DOT__cpu0__DOT__instr_EX
+inst	simtop__DOT__cpu0__DOT__instr_WB
+hex	simtop__DOT__cpu0__DOT__iord_WB

@@ -2,22 +2,22 @@
 # Lab 1 -- CSCE 611
 # Square Root Binary Search
 
-	.data
-guess:	.word	256		# initial guess value
-step:	.word	128		# initial step value
-test:	.word	61440
+#	.data
+#guess:	.word	256		# initial guess value
+#step:	.word	128		# initial step value
+#test:	.word	61440
 
 	.text
 	#li	a7,5		# load sys call 5
 	#ecall			# execute sys call 5
 	
 	#mv	t6,a0
-	lw	a0, test
+	li	a0, 61440
 
-	lw	t1,guess	# load initial guess into t1
+	li	t1,256	# load initial guess into t1
 	slli	t1,t1,14	# shift left 14 bits
 	
-	lw	t2,step		# load step into t2
+	li	t2,128		# load step into t2
 	slli	t2,t2,14	# shift step left by 14 bits
 	
 loop:	mul	t3,t1,t1	# square initial guess (low bits)
@@ -46,3 +46,4 @@ half:	srli	t2,t2,1		# shift step right by 1 bit
 exit:	li 	a7,1		# load sys call 1
 	mv	a0,t1		# display raw result
 	ecall			# execute sys call (result should equal previous ecall)
+	#csrrw t6, 0xf02, t1

@@ -44,13 +44,13 @@ module controller(
 );
 
     // controller logic signals
-    logic [8:0] controls;
+    logic [11:0] controls;
 
     assign { alusrc, regwrite, regsel, aluop, gpio_we, pc_src_EX, stall_FETCH } = controls;
 
     always_comb begin
         // set defaults here
-		//$display("control signals ---> %b", controls);
+		$display("control signals ---> %b", controls);
         if (stall_EX == 1'b0) begin
             case (opcode_EX)
                 // J-Type (jal) always stall after jal
@@ -159,11 +159,11 @@ module controller(
                                                                             12'bx_1_00_xxxx_0_00_0; // SW
                     end
 
-                default: controls = 12'bx_0_xx_xxxx_x_xx_x;
+                default: controls = 12'b0_0_00_0000_0_00_0;
 
             endcase
         end else begin
-            controls = 12'bx;
+            controls = 12'b0_0_00_0000_0_xx_0;
         end
     end
 

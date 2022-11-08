@@ -1,5 +1,5 @@
 // 32-bit multiplexer
-module mux(
+module mux2(
     // inputs
     input logic [31:0] a,
     input logic [31:0] b,

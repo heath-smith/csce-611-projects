@@ -271,13 +271,14 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
-set_global_assignment -name PROJECT_OUTPUT_DIRECTORY "/home/heathsmith/repos/csce-611-projects/lab_rui_hsmith/build"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY "/home/heathsmith/repos/csce-611-projects/lab_jb_hsmith/build"
 set_global_assignment -name VERILOG_INPUT_VERSION VERILOG_2001
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4.sv
 set_global_assignment -name SYSTEMVERILOG_FILE hexdriver.sv
 set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux3.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cpu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv

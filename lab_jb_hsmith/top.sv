@@ -38,9 +38,9 @@ module top (
 //=======================================================
 
 	/* 24 bit clock divider, converts 50MHz clock signal to 2.98Hz */
-	logic [23:0] clkdiv;
-	logic ledclk;
-	assign ledclk = clkdiv[23];
+	//logic [23:0] clkdiv;
+	//logic ledclk;
+	//assign ledclk = clkdiv[23];
 
 	/* driver for LEDs */
 	assign LEDR = SW;
@@ -59,9 +59,9 @@ module top (
 //=======================================================
 
 
-	initial begin
-		clkdiv = 26'h0;
-	end
+	//initial begin
+	//	clkdiv = 26'h0;
+	//end
 
 	cpu _cpu(
 		.clk(CLOCK_50),

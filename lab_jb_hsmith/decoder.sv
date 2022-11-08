@@ -14,8 +14,8 @@ module decoder(
     output logic [11:0] imm12_EX,
     output logic [19:0] imm20_EX,
     output logic [11:0] csr_EX,
-    output logic [11:0] branch_offset_EX,
-    output logic [19:0] jal_offset_EX,
+    output logic [12:0] branch_offset_EX,
+    output logic [20:0] jal_offset_EX,
     output logic [11:0] jalr_offset_EX
 );
 

@@ -9,6 +9,7 @@ module controller(
     input logic [2:0] funct3_EX,
     input logic [6:0] funct7_EX,
     input logic [11:0] csr_EX,
+    input logic [0:0] stall_EX,
 
     /*******************/
     /***** outputs *****/
@@ -29,7 +30,13 @@ module controller(
     output logic [3:0] aluop,
 
     // enables writing to GPIO register (csrrw instruction)
-    output logic [0:0] gpio_we
+    output logic [0:0] gpio_we,
+
+    // controls the PC mux
+    output logic [1:0] pc_src_EX,
+
+    // stall signal
+    output logic [0:0] stall_FETCH
 );
 
     // controller logic signals

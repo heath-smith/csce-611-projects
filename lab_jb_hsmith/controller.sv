@@ -11,6 +11,10 @@ module controller(
     input logic [11:0] csr_EX,
     input logic [0:0] stall_EX,
 
+    // use to resolve branches
+    input logic [31:0] R_EX,
+    input logic zero_EX,
+
     /*******************/
     /***** outputs *****/
     /*******************/
@@ -42,84 +46,125 @@ module controller(
     // controller logic signals
     logic [8:0] controls;
 
-    assign { alusrc, regwrite, regsel, aluop, gpio_we} = controls;
+    assign { alusrc, regwrite, regsel, aluop, gpio_we, pc_src_EX, stall_FETCH } = controls;
 
     always_comb begin
         // set defaults here
-		  $display("control signals ---> %b", controls);
-        case (opcode_EX)
-            // I-type instructions
-            // alusrc === gets a 1 - we want to use sign extended imm12 field from mux
-				// 	as input B to the ALU
-            // regwrite === gets a 1 - we want to immediately write back to regfile
-				// regsel === should be 2 (10) so we pick the ALU output
-            7'b0010011:
-                begin
-                    controls =
-                        (funct3_EX == 3'b000) ? 9'b1_1_10_0011_0 :           // addi
-                        (funct3_EX == 3'b111) ? 9'b1_1_10_0000_0 :           // andi
-                        (funct3_EX == 3'b110) ? 9'b1_1_10_0001_0 :           // ori
-                        (funct3_EX == 3'b100) ? 9'b1_1_10_0010_0 :           // xori
-                        (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000000) ? 9'b1_1_10_1000_0 : // slli
-                        (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0100000) ? 9'b1_1_10_1010_0 : // srai
-                        (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0000000) ? 9'b1_1_10_1001_0 : // srli
-                        9'bx_x_xx_xxxx_x;
-                end
+		//$display("control signals ---> %b", controls);
+        if (stall_EX == 1'b0) begin
+            case (opcode_EX)
+                // J-Type (jal) always stall after jal
+                7'b1101111:
+                    begin
+                        controls = 12'bx_1_11_xxxx_x_10_1;
+                    end
 
-            // R-type instructions
-            7'b0110011:
-                begin
-                    controls =
-                        (funct3_EX == 3'b000
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0011_0 :    // add
-                        (funct3_EX == 3'b000
-                            && funct7_EX == 7'b0100000) ? 9'b0_1_10_0100_0 :    // sub
-                        (funct3_EX == 3'b111
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0000_0 :    // and
-                        (funct3_EX == 3'b110
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0001_0 :    // or
-                        (funct3_EX == 3'b100
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_0010_0 :    // xor
-                        (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1000_0 :   // sll
-                        (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0100000) ? 9'b0_1_10_1010_0 :   // sra
-                        (funct3_EX == 3'b101
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1001_0 :   // srl
-                        (funct3_EX == 3'b010
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1100_0 :   // slt
-                        (funct3_EX == 3'b011
-                            && funct7_EX == 7'b0000000) ? 9'b0_1_10_1101_0 :   // sltu
-                        (funct3_EX == 3'b000
-                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0101_0 :   // mul
-                        (funct3_EX == 3'b001
-                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0110_0 :   // mulh
-                        (funct3_EX == 3'b011
-                            && funct7_EX == 7'b0000001) ? 9'b0_1_10_0111_0 :   // mulhu
-                        9'bx_x_xx_xxxx_x;
-                end
+                // jalr (I-Type encoding)
+                7'b1100111:
+                    begin
+                        controls = 12'bx_1_11_xxxx_x_11_1;
+                    end
 
-            // U-type instructions
-            7'b0110111:
-                begin
-                    controls = 9'bx_1_01_xxxx_0;    // lui
-                end
+                // B-type
+                7'b1100011:
+                    begin
+                        controls =
+                            (funct3_EX == 3'b000) ?
+                                ((zero_EX == 1'b1) ?
+                                    12'b0_1_11_0100_0_01_1 : 12'b0_1_11_0100_0_00_0) : // beq
+                            (funct3_EX == 3'b001) ?
+                                ((zero_EX == 1'b0) ?
+                                    12'b0_1_11_0100_0_01_1 : 12'b0_1_11_0100_0_00_0) : // bne
+                            (funct3_EX == 3'b100) ?
+                                ((R_EX == 32'b1) ?
+                                    12'b0_1_11_1100_0_01_1 : 12'b0_1_11_1100_0_00_0) : // blt
+                            (funct3_EX == 3'b101) ?
+                                ((R_EX == 32'b0) ?
+                                    12'b0_1_11_1100_0_01_1 : 12'b0_1_11_1100_0_00_0) : // bge
+                            (funct3_EX == 3'b110) ?
+                                ((R_EX == 32'b1) ?
+                                    12'b0_1_11_1101_0_01_1 : 12'b0_1_11_1101_0_00_0) : // bltu
+                            (funct3_EX == 3'b111) ?
+                                ((R_EX == 32'b0) ?
+                                    12'b0_1_11_1101_0_01_1 : 12'b0_1_11_1101_0_00_0) : // bgeu
+                            12'bx_x_xx_xxxx_x_xx_x;
+                    end
 
-            // Control and Status Register instructions
-            7'b1110011:
-                begin
-                    // cssrw
-                    controls =
-                        (csr_EX == 12'b111100000010) ? 9'bx_0_xx_xxxx_1 : // HEX
-																		 9'bx_1_00_xxxx_0; // SW
-                end
+                // I-type instructions
+                // alusrc === gets a 1 - we want to use sign extended imm12 field from mux
+                    // 	as input B to the ALU
+                // regwrite === gets a 1 - we want to immediately write back to regfile
+                    // regsel === should be 2 (10) so we pick the ALU output
+                7'b0010011:
+                    begin
+                        controls =
+                            (funct3_EX == 3'b000) ? 12'b1_1_10_0011_0_00_0 :           // addi
+                            (funct3_EX == 3'b111) ? 12'b1_1_10_0000_0_00_0 :           // andi
+                            (funct3_EX == 3'b110) ? 12'b1_1_10_0001_0_00_0 :           // ori
+                            (funct3_EX == 3'b100) ? 12'b1_1_10_0010_0_00_0 :           // xori
+                            (funct3_EX == 3'b001
+                                && funct7_EX == 7'b0000000) ? 12'b1_1_10_1000_0_00_0 : // slli
+                            (funct3_EX == 3'b101
+                                && funct7_EX == 7'b0100000) ? 12'b1_1_10_1010_0_00_0 : // srai
+                            (funct3_EX == 3'b101
+                                && funct7_EX == 7'b0000000) ? 12'b1_1_10_1001_0_00_0 : // srli
+                            12'bx_x_xx_xxxx_x_xx_x;
+                    end
 
-            default: controls = 9'bx_x_xx_xxxx_x;
+                // R-type instructions
+                7'b0110011:
+                    begin
+                        controls =
+                            (funct3_EX == 3'b000
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_0011_0_00_0 :    // add
+                            (funct3_EX == 3'b000
+                                && funct7_EX == 7'b0100000) ? 12'b0_1_10_0100_0_00_0 :    // sub
+                            (funct3_EX == 3'b111
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_0000_0_00_0 :    // and
+                            (funct3_EX == 3'b110
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_0001_0_00_0 :    // or
+                            (funct3_EX == 3'b100
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_0010_0_00_0 :    // xor
+                            (funct3_EX == 3'b001
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_1000_0_00_0 :   // sll
+                            (funct3_EX == 3'b101
+                                && funct7_EX == 7'b0100000) ? 12'b0_1_10_1010_0_00_0 :   // sra
+                            (funct3_EX == 3'b101
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_1001_0_00_0 :   // srl
+                            (funct3_EX == 3'b010
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_1100_0_00_0 :   // slt
+                            (funct3_EX == 3'b011
+                                && funct7_EX == 7'b0000000) ? 12'b0_1_10_1101_0_00_0 :   // sltu
+                            (funct3_EX == 3'b000
+                                && funct7_EX == 7'b0000001) ? 12'b0_1_10_0101_0_00_0 :   // mul
+                            (funct3_EX == 3'b001
+                                && funct7_EX == 7'b0000001) ? 12'b0_1_10_0110_0_00_0 :   // mulh
+                            (funct3_EX == 3'b011
+                                && funct7_EX == 7'b0000001) ? 12'b0_1_10_0111_0_00_0 :   // mulhu
+                            12'bx_x_xx_xxxx_x_xx_x;
+                    end
 
-        endcase
+                // U-type instructions
+                7'b0110111:
+                    begin
+                        controls = 12'bx_1_01_xxxx_0_00_0;    // lui
+                    end
+
+                // Control and Status Register (cssrw) instructions
+                7'b1110011:
+                    begin
+                        // cssrw
+                        controls =
+                            (csr_EX == 12'b111100000010) ? 12'bx_0_xx_xxxx_1_00_0 : // HEX
+                                                                            12'bx_1_00_xxxx_0_00_0; // SW
+                    end
+
+                default: controls = 12'bx_0_xx_xxxx_x_xx_x;
+
+            endcase
+        end else begin
+            controls = 12'bx;
+        end
     end
 
 endmodule

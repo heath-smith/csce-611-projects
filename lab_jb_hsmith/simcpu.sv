@@ -14,7 +14,7 @@ module simcpu;
 
    initial begin
         rst_n = 1'b0; #20;
-	GPIO_in = 18'b00_1111_0000_0000_0000;
+			GPIO_in = 18'b000000000000010001; //18'b00_1111_0000_0000_0000;
         rst_n = 1'b1;
     end
 

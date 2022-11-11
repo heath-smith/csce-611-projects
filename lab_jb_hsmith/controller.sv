@@ -50,19 +50,19 @@ module controller(
 
     always_comb begin
         // set defaults here
-		$display("control signals ---> %b", controls);
+			$display("control signals ---> %b", controls);
         if (stall_EX == 1'b0) begin
             case (opcode_EX)
                 // J-Type (jal) always stall after jal
                 7'b1101111:
                     begin
-                        controls = 12'bx_1_11_xxxx_x_10_1;
+                        controls = 12'b1_1_11_xxxx_x_10_1;
                     end
 
                 // jalr (I-Type encoding)
                 7'b1100111:
                     begin
-                        controls = 12'bx_1_11_xxxx_x_11_1;
+                        controls = 12'b1_1_11_xxxx_x_11_1;
                     end
 
                 // B-type
@@ -87,7 +87,7 @@ module controller(
                             (funct3_EX == 3'b111) ?
                                 ((R_EX == 32'b0) ?
                                     12'b0_1_11_1101_0_01_1 : 12'b0_1_11_1101_0_00_0) : // bgeu
-                            12'bx_x_xx_xxxx_x_xx_x;
+                            12'd0;
                     end
 
                 // I-type instructions
@@ -108,7 +108,7 @@ module controller(
                                 && funct7_EX == 7'b0100000) ? 12'b1_1_10_1010_0_00_0 : // srai
                             (funct3_EX == 3'b101
                                 && funct7_EX == 7'b0000000) ? 12'b1_1_10_1001_0_00_0 : // srli
-                            12'bx_x_xx_xxxx_x_xx_x;
+                            12'd0;
                     end
 
                 // R-type instructions
@@ -141,7 +141,7 @@ module controller(
                                 && funct7_EX == 7'b0000001) ? 12'b0_1_10_0110_0_00_0 :   // mulh
                             (funct3_EX == 3'b011
                                 && funct7_EX == 7'b0000001) ? 12'b0_1_10_0111_0_00_0 :   // mulhu
-                            12'bx_x_xx_xxxx_x_xx_x;
+                            12'd0;
                     end
 
                 // U-type instructions
@@ -159,11 +159,11 @@ module controller(
                                                                             12'bx_1_00_xxxx_0_00_0; // SW
                     end
 
-                default: controls = 12'b0_0_00_0000_0_00_0;
+                default: controls = 12'd0;
 
             endcase
         end else begin
-            controls = 12'b0_0_00_0000_0_xx_0;
+            controls = 12'd0;
         end
     end
 

@@ -8,7 +8,7 @@ module cpu(
     // Set up instruction memory
     logic [31:0] inst_ram [4095:0];
     initial $readmemh("sqrt.dat", inst_ram);
-    logic [11:0] PC_FETCH;
+    logic [11:0] PC_FETCH = 12'd0;
     logic [11:0] PC_EX = 12'd0;
     logic [31:0] instruction_EX;
 
@@ -160,10 +160,6 @@ module cpu(
         .out(writedata_WB)
     );
 
-    // assign PC_FETCH = (~rst_n) ? 12'b0 : (pc_src_EX[1] ?
-    //             (pc_src_EX[0] ? jalr_addr_EX : jal_addr_EX) :
-    //             (pc_src_EX[0] ? branch_addr_EX : PC_FETCH + 1'b1));
-
     // registers
     always_ff @(posedge clk) begin
         if (~rst_n) begin
@@ -186,12 +182,12 @@ module cpu(
 
         end else begin
             //PC_FETCH <= PC_FETCH + 1'b1;
-            PC_FETCH = pc_src_EX[1] ?
+            PC_FETCH <= pc_src_EX[1] ?
                  (pc_src_EX[0] ? jalr_addr_EX : jal_addr_EX) :
                  (pc_src_EX[0] ? branch_addr_EX : PC_FETCH + 1'b1);
 
             PC_EX <= PC_FETCH;
-            instruction_EX <= inst_ram[PC_EX];
+            instruction_EX <= inst_ram[PC_FETCH];
             //(~stall_FETCH) ? inst_ram[PC_EX] : instruction_EX <= 32'd0;
 
             rd_WB <= rd_EX;
@@ -199,7 +195,7 @@ module cpu(
             regsel_WB <= regsel_EX;
             imm20_WB <= imm20_EX_SL;
             R_WB <= R_EX;
-			GPIO_in_WB <= GPIO_in;
+				GPIO_in_WB <= GPIO_in;
 
             stall_EX <= stall_FETCH;
 
@@ -212,10 +208,11 @@ module cpu(
 			$display("process counter ---> %d", PC_FETCH);
 			$display("loaded instruction ---> %8h", inst_ram[PC_FETCH]);
 			$display("stall_EX ---> %1b", stall_EX);
-            $display("stall_FETCH ---> %1b", stall_FETCH);
-            $display("pc_src_EX ---> %2b", pc_src_EX);
-            $display("funct3_EX ---> %3b", funct3_EX);
-            //$display("opcode_EX ---> %b", opcode_EX);
+         $display("stall_FETCH ---> %1b", stall_FETCH);
+         $display("pc_src_EX ---> %2b", pc_src_EX);
+         $display("funct3_EX ---> %3b", funct3_EX);
+			$display("zero_EX ---> %1b", zero_EX);
+         //$display("opcode_EX ---> %b", opcode_EX);
 			//$display("imm12_EX ---> %b", imm12_EX);
 			//$display("imm12_EX_32 ---> %d", $unsigned(imm12_EX_32));
 			//$display("signed im12-32 ===> %8h", imm12_EX_32);

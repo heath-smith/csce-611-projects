@@ -7,8 +7,8 @@
 	#ecall			# execute sys call 5
 	#mv	t6,a0
 	
-	lui a0,  15
-	addi a0, a0, 0
+	li a0,  17
+	#addi a0, a0, 0
 	#csrrw   a0, 0xf00, t6
 
 	addi	t1, zero, 256	# load initial guess into t1
@@ -42,5 +42,154 @@ half:	srli	t2,t2,1		# shift step right by 1 bit
 
 exit:	li 	a7,1		# load sys call 1
 	mv	a0,t1		# display raw result
-	ecall			# execute sys call (result should equal previous ecall)
-	#csrrw t6, 0xf02, a0
+	ecall		
+	
+	# shift 14 bits to the right
+	srli t1,t1,14
+	
+	li t2,100000
+	
+	mul t3,t1,t2
+	mulhu t4,t1,t2
+	
+	# value for testing
+	#addi	s0,zero,234
+	
+	# load constant 0.1 into s1
+	li	s1,429496730
+	addi	s2,zero, 10
+	
+	add 	t0,t0,zero	# set output register to zero
+	
+	# 1
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t4,s1	# fractional bits (lower bits)
+	mulh	t1,t4,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+	
+	# 2
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+
+	# 3
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+
+	# 4
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+	# print value #
+	#li 	a7,1
+	#mv	a0,t2
+	#ecall
+	################
+
+	# 5
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+	# print value #
+	#li 	a7,1
+	#mv	a0,t2
+	#ecall
+	################
+	
+	# 6
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+	# print value #
+	#li 	a7,1
+	#mv	a0,t2
+	##ecall
+	################
+	
+	# 7
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+	# print value #
+	#li 	a7,1
+	#mv	a0,t2
+	#ecall
+	################
+	
+	# 8
+	slli	t0,t0,4		# shift left 4-bits
+	
+	mul	t2,t1,s1	# fractional bits (lower bits)
+	mulh	t1,t1,s1	# whole number (upper bits) / 10
+	
+	mulhu	t2,t2,s2	# multiply fractional bits by 10
+	#addi	t2,t2,1
+
+	or 	t0,t0,t2	# or with register t0 --> t0
+
+	# print value #
+	li 	a7,1
+	mv	a0,t0
+	ecall
+	################	
+	
+	
+	# write destination register to switches
+	#csrrw t6, 0xf02, t0
+
+	
+	
+	#csrrw t6, 0xf02, t1
+	
+	#li 	a7,1		# load sys call 1
+	#mv	a0,t2		# display raw result
+	#ecall			# execute sys call (result should equal previous ecall)
+	
+

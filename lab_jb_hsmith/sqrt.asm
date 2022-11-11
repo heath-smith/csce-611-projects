@@ -1,22 +1,20 @@
-# Heath Smith & John Barnes
-# Lab 1 -- CSCE 611
+# Heath Smith
+# Lab 4 -- CSCE 611
 # Square Root Binary Search
-
-	.data
-guess:	.word	256		# initial guess value
-step:	.word	128		# initial step value
 
 	.text
 	#li	a7,5		# load sys call 5
 	#ecall			# execute sys call 5
-	
 	#mv	t6,a0
-	csrrw   a0, 0xf00, t6
+	
+	lui a0,  15
+	addi a0, a0, 0
+	#csrrw   a0, 0xf00, t6
 
-	lw	t1,guess	# load initial guess into t1
+	addi	t1, zero, 256	# load initial guess into t1
 	slli	t1,t1,14	# shift left 14 bits
 	
-	lw	t2,step		# load step into t2
+	addi	t2, zero, 128		# load step into t2
 	slli	t2,t2,14	# shift step left by 14 bits
 	
 loop:	mul	t3,t1,t1	# square initial guess (low bits)
@@ -29,20 +27,20 @@ loop:	mul	t3,t1,t1	# square initial guess (low bits)
 	beq	a0,t5,exit	# exit if input == guess^2
 	blt	a0,t5,else	# branch if a0 < t5
 	add	t1,t1,t2	# add step if a0 > t5
-	b 	half		# jump to half
+	jal 	half		# jump to half
 
 else:	sub	t1,t1,t2	# jump here if a0 < t5
-	b 	half
+	jal 	half
 	
 half:	srli	t2,t2,1		# shift step right by 1 bit
 
 	beq	t2,zero,exit	# stop if step == 0
 	
-	b 	loop
+	jal 	loop
 	
-	b 	exit
+	jal 	exit
 
-exit:	#li 	a7,1		# load sys call 1
+exit:	li 	a7,1		# load sys call 1
 	mv	a0,t1		# display raw result
-	#ecall			# execute sys call (result should equal previous ecall)
-	csrrw t6, 0xf02, a0
+	ecall			# execute sys call (result should equal previous ecall)
+	#csrrw t6, 0xf02, a0

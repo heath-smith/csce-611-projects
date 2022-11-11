@@ -14,7 +14,7 @@ module simcpu;
 
    initial begin
         rst_n = 1'b0; #20;
-	GPIO_in = 18'b00_0000_0000_1110_1010;
+	GPIO_in = 18'b00_1111_0000_0000_0000;
         rst_n = 1'b1;
     end
 
@@ -23,7 +23,7 @@ module simcpu;
         clk = 1'b0; #5;
     end
 
- 
+
 
     always @(posedge clk) begin
         $display("CPU output --->  %h", GPIO_out);

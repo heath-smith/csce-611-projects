@@ -8,7 +8,7 @@ module cpu(
     // Set up instruction memory
     logic [31:0] inst_ram [4095:0];
     initial $readmemh("sqrt.dat", inst_ram);
-    logic [11:0] PC_FETCH = 12'd0;
+    logic [11:0] PC_FETCH;
     logic [11:0] PC_EX = 12'd0;
     logic [31:0] instruction_EX;
 
@@ -160,11 +160,15 @@ module cpu(
         .out(writedata_WB)
     );
 
+    // assign PC_FETCH = (~rst_n) ? 12'b0 : (pc_src_EX[1] ?
+    //             (pc_src_EX[0] ? jalr_addr_EX : jal_addr_EX) :
+    //             (pc_src_EX[0] ? branch_addr_EX : PC_FETCH + 1'b1));
+
     // registers
     always_ff @(posedge clk) begin
         if (~rst_n) begin
 
-            PC_FETCH = 12'd0;          // process counter
+            PC_FETCH <= 12'd0;          // process counter
             instruction_EX <= 32'd0;    // instruction to execute
 
             rd_WB <= 5'd0;              // destination register write back
@@ -182,11 +186,13 @@ module cpu(
 
         end else begin
             //PC_FETCH <= PC_FETCH + 1'b1;
-            PC_FETCH <= pc_src_EX[1] ?
-                (pc_src_EX[0] ? jalr_addr_EX : jal_addr_EX) :
-                (pc_src_EX[0] ? branch_addr_EX : PC_FETCH + 1'b1);
+            PC_FETCH = pc_src_EX[1] ?
+                 (pc_src_EX[0] ? jalr_addr_EX : jal_addr_EX) :
+                 (pc_src_EX[0] ? branch_addr_EX : PC_FETCH + 1'b1);
+
             PC_EX <= PC_FETCH;
-            instruction_EX <= inst_ram[PC_FETCH];
+            instruction_EX <= inst_ram[PC_EX];
+            //(~stall_FETCH) ? inst_ram[PC_EX] : instruction_EX <= 32'd0;
 
             rd_WB <= rd_EX;
             regwrite_WB <= regwrite_EX;
@@ -208,6 +214,7 @@ module cpu(
 			$display("stall_EX ---> %1b", stall_EX);
             $display("stall_FETCH ---> %1b", stall_FETCH);
             $display("pc_src_EX ---> %2b", pc_src_EX);
+            $display("funct3_EX ---> %3b", funct3_EX);
             //$display("opcode_EX ---> %b", opcode_EX);
 			//$display("imm12_EX ---> %b", imm12_EX);
 			//$display("imm12_EX_32 ---> %d", $unsigned(imm12_EX_32));
@@ -227,18 +234,18 @@ module cpu(
 			//$display("readdata1 ---> %8h", readdata1);
 			//$display("readdata2 ---> %b", readdata2);
 			//$display("regwrite_WB ---> %b", regwrite_WB);
-			//$display("writedata_WB ---> %8h", writedata_WB);
+			$display("writedata_WB ---> %8h", writedata_WB);
 			//$display("unsigned imm12 ===> %d", $unsigned(imm12_EX));
 			//$display("signed imm21 ===> %d", $signed(imm12_EX));
 			//$display("regsel_WB ---> %b", regsel_WB);
 			//$display("B_EX ---> %8h", B_EX);
-			//$display("R_EX ---> %8h", R_EX);
+			$display("R_EX ---> %8h", R_EX);
 			//$display("R_WB ---> %8h", R_WB);
-			//$display("CPU_out ---> %8h", CPU_out);
-			//$display("GPIO_in ---> %8h", GPIO_in);
+			$display("CPU_out ---> %8h", CPU_out);
+			$display("GPIO_in ---> %8h", GPIO_in);
 			//$display("GPIO_in_WB ---> %b", GPIO_in_WB);
 			//$display("GPIO_we ---> %b", GPIO_we);
-			//$display("GPIO_out ---> %8h", GPIO_out);
+			$display("GPIO_out ---> %8h", GPIO_out);
 			$display("-----------------------------------------------");
      end
 

@@ -56,18 +56,18 @@ exit:	#li 	a7,1		# load sys call 1
 	or	s0,t3,t4	# OR t3 with t4
 	
 	# simple rounding
-	li	t5,1		# load 1 in t5
-	srli	t4,t4,12	# shift low bits right 17 to get precision bit
-	and	t4,t4,t5
+	#li	t5,1		# load 1 in t5
+	#srli	t4,t4,12	# shift low bits right 17 to get precision bit
+	#and	t4,t4,t5
 
 	#li 	a7,1
 	#mv	a0,t4
 	#ecall
 	
-	blt	t4,t5,jump	# branch if decimal bits <1
+	#blt	t4,t5,jump	# branch if decimal bits <1
 
 	
-	add	s0,s0,t5	# add 1 to s0
+	#sub	s0,s0,t5	# add 1 to s0
 
 	# print value #
 	#li 	a7,1
@@ -84,7 +84,7 @@ exit:	#li 	a7,1		# load sys call 1
 	################		
 
 	# load constant 0.1 into s1
-jump:	li	s1,429496730
+	li	s1,429496730
 	addi	s2,zero,10
 
 	# set output register to zero

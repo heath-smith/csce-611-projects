@@ -1,0 +1,370 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith
+T_opt
+!s110 1668808806
+V@B4@B4Zz?6^=7cVOMACUO1
+04 6 4 work simcpu fast 0
+=1-000ae431a4f1-63780065-db713-2908
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.1;71
+valu
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1668808784
+!i10b 1
+!s100 n>_PecEo^AoQ4KY?>RzKh1
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@OdLX9>E^DPVKhP:PKOK93
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+Z6 w1668807614
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/alu.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/alu.sv
+!i122 0
+L0 7 51
+Z7 OL;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1668808784.000000
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/alu.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/alu.sv|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcontroller
+R2
+R3
+!i10b 1
+!s100 _?fZ_O9ZU[G>iYH[GNQ7m3
+R4
+IG`6Qec29H^L[5UWaFViS92
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/controller.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/controller.sv
+!i122 1
+L0 2 169
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/controller.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/controller.sv|
+!i113 0
+R9
+R1
+vcpu
+R2
+R3
+!i10b 1
+!s100 LaHKL6P1GeQmW=@g7nEAE3
+R4
+I>k4oaF^bi_`=;zSnZ`=9R3
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/cpu.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/cpu.sv
+!i122 2
+L0 1 249
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/cpu.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/cpu.sv|
+!i113 0
+R9
+R1
+vdecoder
+R2
+R3
+!i10b 1
+!s100 ?SG;k;jl`<[D5>jnWk@Re0
+R4
+IhzP5GJ4nEnCc1V[Hb9akL2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/decoder.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/decoder.sv
+!i122 3
+L0 6 32
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/decoder.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/decoder.sv|
+!i113 0
+R9
+R1
+vhexdriver
+R2
+R3
+!i10b 1
+!s100 XnX8WRLDJIX^FUzVTg_6O1
+R4
+I8bIkZ^TV6Q1cAm::f<i?C2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/hexdriver.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/hexdriver.sv
+!i122 4
+L0 1 42
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/hexdriver.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/hexdriver.sv|
+!i113 0
+R9
+R1
+vmux2
+R2
+R3
+!i10b 1
+!s100 b5?7bMB=K6Sj5Wmm0`cVO3
+R4
+I`a]Z8eiO<Ji11Sj3S0G3<2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux2.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux2.sv
+!i122 5
+L0 2 12
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux2.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux2.sv|
+!i113 0
+R9
+R1
+vmux3
+R2
+R3
+!i10b 1
+!s100 Ka]je2f0Wa6Q[md5U:3M81
+R4
+IRf;G3Q:CMYhi@=KgR0jXm1
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux3.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux3.sv
+!i122 6
+L0 2 28
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux3.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux3.sv|
+!i113 0
+R9
+R1
+vmux4
+R2
+R3
+!i10b 1
+!s100 Vm3TIQb:i;m0VomVD;Tl;1
+R4
+IJ78:z5_@k2:UKODij@?Y^2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux4.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux4.sv
+!i122 7
+L0 3 15
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux4.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/mux4.sv|
+!i113 0
+R9
+R1
+vregfile
+R2
+R3
+!i10b 1
+!s100 FTTIUH1N4_CNg4Yi`?kN>3
+R4
+I;M`^Bh4]Z?jOKSM7f4zhF0
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/regfile.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/regfile.sv
+!i122 8
+L0 3 74
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/regfile.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/regfile.sv|
+!i113 0
+R9
+R1
+vsignext
+R2
+R3
+!i10b 1
+!s100 6M<15[>4B^iikA4;JimQK1
+R4
+IPhRd]TB1i2Z;ZHa2CEHfm2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/signext.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/signext.sv
+!i122 9
+L0 2 11
+R7
+r1
+!s85 0
+31
+R8
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/signext.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/signext.sv|
+!i113 0
+R9
+R1
+vsimcpu
+R2
+Z10 !s110 1668808785
+!i10b 1
+!s100 0_KioUWiL]O]4nF[PlY?C0
+R4
+IUSba[lXgCO24KZ>VB_W7c3
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simcpu.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simcpu.sv
+!i122 10
+L0 2 31
+R7
+r1
+!s85 0
+31
+Z11 !s108 1668808785.000000
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simcpu.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simcpu.sv|
+!i113 0
+R9
+R1
+vsimdecoder
+R2
+R10
+!i10b 1
+!s100 5;]@9[TnQP0Ke8;joC=Lh0
+R4
+I5kdJhiVJiY8Y8iP;KXABn3
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simdecoder.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simdecoder.sv
+!i122 11
+L0 3 130
+R7
+r1
+!s85 0
+31
+R11
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simdecoder.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simdecoder.sv|
+!i113 0
+R9
+R1
+vsimtop
+R2
+!s110 1668808792
+!i10b 1
+!s100 f^D7ZIOj4Z18`k]F<AY6i0
+R4
+I^:lz;SaPTJGT7GA_oOne72
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simtop.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simtop.sv
+!i122 13
+L0 6 56
+R7
+r1
+!s85 0
+31
+!s108 1668808792.000000
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simtop.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/simtop.sv|
+!i113 0
+R9
+R1
+vtop
+R2
+!s110 1668808791
+!i10b 1
+!s100 4PlGA@94SAZo6lIGi?=oS3
+R4
+Ian2hU55K0E6l5<3eCnJU^2
+R5
+S1
+R0
+R6
+8/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/top.sv
+F/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/top.sv
+!i122 12
+L0 6 78
+R7
+r1
+!s85 0
+31
+!s108 1668808791.000000
+!s107 /acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/top.sv|
+!s90 -reportprogress|300|-work|work|/acct/smithmh6/Courses/Fall2022/csce-611-projects/lab_jb_hsmith/top.sv|
+!i113 0
+R9
+R1
